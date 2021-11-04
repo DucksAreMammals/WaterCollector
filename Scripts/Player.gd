@@ -19,7 +19,7 @@ func _physics_process(delta: float) -> void:
 		if Input.is_action_pressed("right"):
 			velocity.x = move_speed
 		if Input.is_action_pressed("left"):
-			velocity.x = move_speed
+			velocity.x = -move_speed
 	else:
 		velocity.x *= air_resistance
 		
