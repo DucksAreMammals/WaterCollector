@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=3]
 
 [node name="Node2D" type="Node2D"]
 
@@ -14,3 +15,6 @@ tile_data = PoolIntArray( 65521, 0, 0, 65522, 0, 0, 65523, 0, 0, 65524, 0, 0, 65
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 61.6692, 334.504 )
+
+[node name="Enemy" parent="." groups=["enemy"] instance=ExtResource( 3 )]
+position = Vector2( -148.375, 475.29 )
