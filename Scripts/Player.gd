@@ -5,13 +5,13 @@ export var move_speed_run := 15000.0
 export var friction := 0.5
 export var air_speed_reg := 2500.0
 export var air_speed_run := 5000.0
-export var jump_speed := 1000.0
+export var jump_speed := 750.0
 export var air_resistance := 0.8
 export var gravity := 1700.0
 
 export var invincibility_duration := 1.25
 
-export var x_hurt_bounce_speed := 750.0
+export var x_hurt_bounce_speed := 650.0
 export var y_hurt_bounce_speed := 500.0
 
 export var x_attack_bounce_speed := 0.0
@@ -20,6 +20,11 @@ export var y_attack_bounce_speed := 500.0
 export var time_between_invincibility_blinks := 100000
 
 export var health := 30
+
+export var jump_continue_limit := 0.25
+
+var jump_continue := 0.0
+
 
 var air_speed
 var move_speed
@@ -60,8 +65,7 @@ func change_animation():
 		$AnimatedSprite.play("idle")
 
 func _move(delta):
-	# TODO: Fix sliding on slopes
-	
+	# Handle run input
 	if Input.is_action_pressed("run"):
 		move_speed = move_speed_run
 		air_speed = air_speed_run
@@ -77,20 +81,30 @@ func _move(delta):
 		velocity.x *= air_resistance
 		velocity.x += (Input.get_action_strength("right") - Input.get_action_strength("left")) * air_speed * delta
 	
-	if Input.is_action_just_pressed("jump"):
-		if is_on_floor():
+	# Handle jump
+	if Input.is_action_pressed("jump"):
+		if is_on_floor() or (jump_continue > 0 and jump_continue < jump_continue_limit):
+			jump_continue += delta
 			velocity.y = -jump_speed
 			snapping = Vector2.ZERO
 	else:
-		snapping = Vector2.DOWN * 15
-
+		snapping = Vector2.DOWN * 5
+		jump_continue = 0
+	
+	# Handle hitting ceiling
+	if is_on_ceiling():
+		jump_continue = 0
+	
+	# Handle bouncing off of enemies
 	if bounce.length_squared() > 0:
 		velocity += bounce
 		bounce = Vector2.ZERO
 		snapping = Vector2.ZERO
 	
+	# Handle gravity
 	velocity.y += gravity * delta
 	
+	# Move
 	velocity = move_and_slide_with_snap(velocity, snapping, Vector2.UP, true)
 
 func _collide():
@@ -110,7 +124,8 @@ func _collide():
 				bounce.x = x_attack_bounce_speed
 				
 				$Camera.shake()
-			# hitting players is handled by enemies
+			else:
+				_hit(collision.normal.x)
 
 func hit_by_enemy(direction):
 	_hit(direction)
