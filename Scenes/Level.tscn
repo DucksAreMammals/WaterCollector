@@ -9,6 +9,7 @@
 extents = Vector2( 4.94978, 57.3535 )
 
 [node name="Node2D" type="Node2D"]
+position = Vector2( 1, 0 )
 
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2( 4, 4 )

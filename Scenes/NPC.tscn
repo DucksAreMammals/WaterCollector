@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Sprites/NPC.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/NPC.gd" type="Script" id=2]
+[ext_resource path="res://Animation/textout.tres" type="Animation" id=3]
+[ext_resource path="res://Animation/textin.tres" type="Animation" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 48, 28 )
@@ -22,10 +24,12 @@ shape = SubResource( 1 )
 [node name="TextBox" type="ColorRect" parent="."]
 visible = false
 self_modulate = Color( 0, 0, 0, 1 )
-margin_left = -176.0
-margin_top = -136.0
-margin_right = 40.0
-margin_bottom = -32.0
+margin_left = -165.6
+margin_top = -138.0
+margin_right = 50.4
+margin_bottom = -34.0
+rect_rotation = -7.2
+rect_scale = Vector2( 0.92, 0.92 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -40,6 +44,11 @@ autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../TextBox")
+anims/in = ExtResource( 4 )
+anims/out = ExtResource( 3 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]
