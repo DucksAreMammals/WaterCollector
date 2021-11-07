@@ -25,6 +25,10 @@ export var jump_continue_limit := 0.25
 
 var jump_continue := 0.0
 
+onready var passthrough_raycast_down_left = $PassthroughRaycastDownLeft
+onready var passthrough_raycast_down_right = $PassthroughRaycastDownRight
+onready var passthrough_raycast_up_left = $PassthroughRaycastUpLeft
+onready var passthrough_raycast_up_right = $PassthroughRaycastUpRight
 
 var air_speed
 var move_speed
@@ -65,6 +69,17 @@ func change_animation():
 		$AnimatedSprite.play("idle")
 
 func _move(delta):
+	# Handle passthrough collisions
+	if not Input.is_action_pressed("down") and \
+		(passthrough_raycast_down_left.is_colliding() or
+		passthrough_raycast_down_right.is_colliding()) and not \
+		(passthrough_raycast_up_left.is_colliding() or
+		passthrough_raycast_up_right.is_colliding()):
+			
+		set_collision_mask_bit(1, true)
+	else:
+		set_collision_mask_bit(1, false)
+	
 	# Handle run input
 	if Input.is_action_pressed("run"):
 		move_speed = move_speed_run
@@ -82,14 +97,16 @@ func _move(delta):
 		velocity.x += (Input.get_action_strength("right") - Input.get_action_strength("left")) * air_speed * delta
 	
 	# Handle jump
-	if Input.is_action_pressed("jump"):
-		if is_on_floor() or (jump_continue > 0 and jump_continue < jump_continue_limit):
-			jump_continue += delta
-			velocity.y = -jump_speed
-			snapping = Vector2.ZERO
+	if Input.is_action_just_pressed("jump") and is_on_floor():
+		jump_continue += delta
+		velocity.y = -jump_speed
+		snapping = Vector2.ZERO
+	elif Input.is_action_pressed("jump") and jump_continue > 0 and jump_continue < jump_continue_limit:
+		jump_continue += delta
+		velocity.y = -jump_speed
 	else:
-		snapping = Vector2.DOWN * 5
 		jump_continue = 0
+		snapping = Vector2.DOWN * 5
 	
 	# Handle hitting ceiling
 	if is_on_ceiling():
@@ -110,7 +127,8 @@ func _move(delta):
 func _collide():
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
-
+		
+		# Handle enemy collisions
 		if collision.collider.is_in_group("enemy"):
 			if collision.normal.y < 0:
 				# Bounce off of enemy
@@ -126,7 +144,7 @@ func _collide():
 				$Camera.shake()
 			else:
 				_hit(collision.normal.x)
-
+		
 func hit_by_enemy(direction):
 	_hit(direction)
 
@@ -146,3 +164,11 @@ func _hit(direction):
 
 func _die():
 	queue_free()
+
+func collect(type):
+	match type:
+		0:
+			_collect_end()
+
+func _collect_end():
+	print("You win!")

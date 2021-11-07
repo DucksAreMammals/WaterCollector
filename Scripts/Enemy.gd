@@ -22,7 +22,7 @@ func _physics_process(delta):
 		
 		direction = 1
 		
-	elif raycast_right.is_colliding():
+	if raycast_right.is_colliding():
 		if raycast_right.get_collider().has_method("hit_by_enemy"):
 			raycast_right.get_collider().hit_by_enemy(1)
 		

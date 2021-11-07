@@ -41,7 +41,6 @@ shape = SubResource( 1 )
 scale = Vector2( 4, 4 )
 frames = SubResource( 6 )
 animation = "walk"
-frame = 1
 playing = true
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
