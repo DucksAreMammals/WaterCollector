@@ -26,8 +26,6 @@ func _process(delta):
 		offset.x = max_offset * shake_amount * noise.get_noise_2d(noise.seed*2, OS.get_ticks_usec() * shake_speed)
 		offset.y = max_offset * shake_amount * noise.get_noise_2d(noise.seed*3, OS.get_ticks_usec() * shake_speed)
 		shake_amount -= delta * shake_decay
-		
-		print(rotation)
 	else:
 		rotation = 0
 		offset.x = 0

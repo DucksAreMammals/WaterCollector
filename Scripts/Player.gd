@@ -9,7 +9,7 @@ export var jump_speed := 1000.0
 export var air_resistance := 0.8
 export var gravity := 1700.0
 
-export var invincibility_duration := 0.5
+export var invincibility_duration := 1.25
 
 export var x_hurt_bounce_speed := 750.0
 export var y_hurt_bounce_speed := 500.0
@@ -17,8 +17,9 @@ export var y_hurt_bounce_speed := 500.0
 export var x_attack_bounce_speed := 0.0
 export var y_attack_bounce_speed := 500.0
 
+export var time_between_invincibility_blinks := 100000
 
-export var health := 3
+export var health := 30
 
 var air_speed
 var move_speed
@@ -30,6 +31,10 @@ var bounce := Vector2.ZERO
 
 func _process(_delta: float) -> void:
 	change_animation()
+
+	if invincible_until > OS.get_ticks_usec():
+		var time_left = invincible_until - OS.get_ticks_usec()
+		visible = int(time_left) % time_between_invincibility_blinks < time_between_invincibility_blinks / 2 
 
 func _physics_process(delta: float) -> void:
 	_move(delta)
@@ -52,6 +57,8 @@ func change_animation():
 		$AnimatedSprite.play("idle")
 
 func _move(delta):
+	# TODO: Fix sliding on slopes
+	
 	if Input.is_action_pressed("run"):
 		move_speed = move_speed_run
 		air_speed = air_speed_run
@@ -89,27 +96,35 @@ func _collide():
 
 		if collision.collider.is_in_group("enemy"):
 			if collision.normal.y < 0:
+				# Bounce off of enemy
 				collision.collider.hit()
-
-				bounce.y = -y_hurt_bounce_speed
+				
+				if Input.is_action_pressed("jump"):
+					bounce.y = -jump_speed
+				else:
+					bounce.y = -y_hurt_bounce_speed
+				
 				bounce.x = x_attack_bounce_speed
 				
 				$Camera.shake()
-			else:
-				_hit()
-				
-				bounce.y = -y_hurt_bounce_speed
-				bounce.x = collision.normal.x * x_hurt_bounce_speed
-				
-				$Camera.shake()
+			# hitting players is handled by enemies
 
-func _hit():
+func hit_by_enemy(direction):
+	_hit(direction)
+
+func _hit(direction):
 	if invincible_until < OS.get_ticks_usec():
 		invincible_until = OS.get_ticks_usec() + invincibility_duration * 1000000
 
 		health -= 1
 		if health <= 0:
 			_die()
+		
+		bounce.y = -y_hurt_bounce_speed
+		bounce.x = direction * x_hurt_bounce_speed
+		
+		$Camera.shake()
+		
 
 func _die():
 	queue_free()
