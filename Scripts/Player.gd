@@ -29,6 +29,9 @@ var invincible_until := -1.0
 
 var bounce := Vector2.ZERO
 
+func _ready():
+	add_to_group("player")
+
 func _process(_delta: float) -> void:
 	change_animation()
 
