@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Fall.png-41dbb76f48dfd894f0ead59f48aad302.stex"
+path="res://.import/Player Run.png-b1fedee420f1ad052ff40036d5561b4b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Fall.png"
-dest_files=[ "res://.import/Fall.png-41dbb76f48dfd894f0ead59f48aad302.stex" ]
+source_file="res://Sprites/Player Run.png"
+dest_files=[ "res://.import/Player Run.png-b1fedee420f1ad052ff40036d5561b4b.stex" ]
 
 [params]
 
@@ -28,6 +28,7 @@ process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
+process/normal_map_invert_y=false
 stream=false
 size_limit=0
 detect_3d=true
