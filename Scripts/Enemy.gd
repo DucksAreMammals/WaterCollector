@@ -5,7 +5,7 @@ export var speed := 50.0
 
 var velocity := Vector2.ZERO
 var snapping := Vector2.DOWN * 15
-var direction := 1
+var direction := -1
 
 onready var raycast_left := $RayCastLeft
 onready var raycast_right := $RayCastRight

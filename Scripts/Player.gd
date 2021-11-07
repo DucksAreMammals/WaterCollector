@@ -93,7 +93,7 @@ func _move(delta):
 	
 	# Handle hitting ceiling
 	if is_on_ceiling():
-		jump_continue = 0
+		jump_continue = 0;
 	
 	# Handle bouncing off of enemies
 	if bounce.length_squared() > 0:
