@@ -28,6 +28,8 @@ export var jump_continue_limit := 0.25
 
 var jump_continue := 0.0
 
+var water_count := 0
+
 onready var passthrough_raycast_down_left = $PassthroughRaycastDownLeft
 onready var passthrough_raycast_down_right = $PassthroughRaycastDownRight
 onready var passthrough_raycast_up_left = $PassthroughRaycastUpLeft
@@ -49,6 +51,8 @@ func _process(_delta: float) -> void:
 
 	if invincible_until > OS.get_ticks_usec():
 		var time_left = invincible_until - OS.get_ticks_usec()
+# I don't know how to fix this so I'm ignoring it. Hopefully it doesn't break things
+# warning-ignore:integer_division
 		visible = int(time_left) % time_between_invincibility_blinks < time_between_invincibility_blinks / 2 
 
 func _physics_process(delta: float) -> void:
@@ -166,12 +170,12 @@ func _hit(direction):
 		_update_health()
 
 func _update_health():
-	$UI/Heart3.visible = health >= 3
-	$UI/Heart2.visible = health >= 2
-	$UI/Heart1.visible = health >= 1
+	$UI/Heart3.texture = full_heart if health >= 3 else empty_heart
+	$UI/Heart2.texture = full_heart if health >= 2 else empty_heart
+	$UI/Heart1.texture = full_heart if health >= 1 else empty_heart
 
 func _die():
-	visible = false
+	queue_free()
 
 func collect(type):
 	match type:
@@ -181,7 +185,14 @@ func collect(type):
 			_collect_drop()
 
 func _collect_drop():
-	print("Collect!")
+	water_count += 1
+	$UI/WaterDropCount.text = str(water_count)
 
 func _collect_end():
 	print("You win!")
+	
+func _on_DeathPlane_body_entered(body):
+	if body == self:
+		health = 0
+		_update_health()
+		_die()

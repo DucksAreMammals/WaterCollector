@@ -1,11 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Animation/PlayerAnimation.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
 [ext_resource path="res://Scripts/Camera.gd" type="Script" id=3]
 [ext_resource path="res://Sprites/HeartFull.png" type="Texture" id=4]
-
-[sub_resource type="ImageTexture" id=2]
+[ext_resource path="res://Sprites/Water Drop.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/HeartEmpty.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2, 8 )
@@ -15,7 +15,8 @@ scale = Vector2( 4, 4 )
 z_index = 10
 collision_mask = 3
 script = ExtResource( 2 )
-full_heart = SubResource( 2 )
+full_heart = ExtResource( 4 )
+empty_heart = ExtResource( 6 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = ExtResource( 1 )
@@ -70,3 +71,22 @@ texture = ExtResource( 4 )
 position = Vector2( 184, 40 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 4 )
+
+[node name="WaterDrop" type="Sprite" parent="UI"]
+position = Vector2( 982, 40 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 5 )
+
+[node name="WaterDropCount" type="Label" parent="UI"]
+margin_left = 880.0
+margin_top = 8.0
+margin_right = 944.0
+margin_bottom = 72.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "0"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

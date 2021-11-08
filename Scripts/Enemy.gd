@@ -35,7 +35,7 @@ func _physics_process(delta):
 	
 	velocity = move_and_slide_with_snap(velocity, snapping, Vector2.UP, true)
 
-func _process(delta):
+func _process(_delta):
 	_change_animation()
 
 func _change_animation():

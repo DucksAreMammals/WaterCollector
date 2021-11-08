@@ -3,7 +3,7 @@ extends Camera2D
 var default_shake_amount := 5.0
 var default_shake_speed := 0.00008
 var default_shake_decay := 10.0
-var default_max_roll := 0.02
+var default_max_roll := 0.0
 var default_max_offset := 10.0
 
 var shake_amount := 0.0
