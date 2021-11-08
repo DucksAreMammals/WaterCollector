@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+signal die
+
 export (Texture) var full_heart
 export (Texture) var empty_heart
 
@@ -50,6 +52,7 @@ export var time_between_shots := 1000000
 
 func _ready():
 	add_to_group("player")
+	connect("die", get_parent(), "_on_Player_die")
 
 func _process(_delta: float) -> void:
 	if Input.is_action_pressed("shoot") and next_shoot_time < OS.get_ticks_usec() \
@@ -192,12 +195,10 @@ func _update_health():
 	$UI/Heart1.texture = full_heart if health >= 1 else empty_heart
 
 func _die():
-	queue_free()
+	emit_signal("die")
 
 func collect(type):
 	match type:
-		0:
-			_collect_end()
 		1:
 			_collect_drop()
 
@@ -207,9 +208,6 @@ func _collect_drop():
 
 func _update_water_count():
 	$UI/WaterDropCount.text = str(water_count)
-
-func _collect_end():
-	print("You win!")
 	
 func _on_DeathPlane_body_entered(body):
 	if body == self:
