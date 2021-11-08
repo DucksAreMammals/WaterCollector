@@ -1,6 +1,7 @@
 extends Node2D
 
 # 0: Level end
+# 1: Water Drop
 export var type := 0
 
 func _on_Area2D_body_entered(body):

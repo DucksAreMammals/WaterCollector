@@ -1,5 +1,8 @@
 extends KinematicBody2D
 
+export (Texture) var full_heart
+export (Texture) var empty_heart
+
 export var move_speed_reg := 7500.0
 export var move_speed_run := 15000.0
 export var friction := 0.5
@@ -19,7 +22,7 @@ export var y_attack_bounce_speed := 500.0
 
 export var time_between_invincibility_blinks := 100000
 
-export var health := 30
+export var health := 3
 
 export var jump_continue_limit := 0.25
 
@@ -160,15 +163,25 @@ func _hit(direction):
 		bounce.x = direction * x_hurt_bounce_speed
 		
 		$Camera.shake()
-		
+		_update_health()
+
+func _update_health():
+	$UI/Heart3.visible = health >= 3
+	$UI/Heart2.visible = health >= 2
+	$UI/Heart1.visible = health >= 1
 
 func _die():
-	queue_free()
+	visible = false
 
 func collect(type):
 	match type:
 		0:
 			_collect_end()
+		1:
+			_collect_drop()
+
+func _collect_drop():
+	print("Collect!")
 
 func _collect_end():
 	print("You win!")
