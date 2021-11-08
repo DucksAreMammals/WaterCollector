@@ -73,14 +73,14 @@ scale = Vector2( 4, 4 )
 texture = ExtResource( 4 )
 
 [node name="WaterDrop" type="Sprite" parent="UI"]
-position = Vector2( 982, 40 )
+position = Vector2( 1000, 40 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 5 )
 
 [node name="WaterDropCount" type="Label" parent="UI"]
-margin_left = 880.0
+margin_left = 898.0
 margin_top = 8.0
-margin_right = 944.0
+margin_right = 962.0
 margin_bottom = 72.0
 grow_horizontal = 0
 grow_vertical = 0

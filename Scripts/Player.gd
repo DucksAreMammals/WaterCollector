@@ -35,6 +35,8 @@ onready var passthrough_raycast_down_right = $PassthroughRaycastDownRight
 onready var passthrough_raycast_up_left = $PassthroughRaycastUpLeft
 onready var passthrough_raycast_up_right = $PassthroughRaycastUpRight
 
+var bullet = preload("res://Scenes/Bullet.tscn")
+
 var air_speed
 var move_speed
 var velocity := Vector2.ZERO
@@ -43,10 +45,25 @@ var invincible_until := -1.0
 
 var bounce := Vector2.ZERO
 
+var next_shoot_time := -1
+export var time_between_shots := 1000000
+
 func _ready():
 	add_to_group("player")
 
 func _process(_delta: float) -> void:
+	if Input.is_action_pressed("shoot") and next_shoot_time < OS.get_ticks_usec() \
+		and water_count > 0:
+		
+		water_count -= 1
+		_update_water_count()
+		
+		next_shoot_time = OS.get_ticks_usec() + time_between_shots
+		var bullet_instance = bullet.instance()
+		bullet_instance.direction = -1 if $AnimatedSprite.flip_h else 1
+		bullet_instance.position = position + Vector2(bullet_instance.direction * 10, 0) 
+		get_parent().add_child(bullet_instance)
+
 	change_animation()
 
 	if invincible_until > OS.get_ticks_usec():
@@ -139,7 +156,7 @@ func _collide():
 		if collision.collider.is_in_group("enemy"):
 			if collision.normal.y < 0:
 				# Bounce off of enemy
-				collision.collider.hit()
+				collision.collider.hit(0)
 				
 				if Input.is_action_pressed("jump"):
 					bounce.y = -jump_speed
@@ -152,7 +169,7 @@ func _collide():
 			else:
 				_hit(collision.normal.x)
 		
-func hit_by_enemy(direction):
+func hit(direction):
 	_hit(direction)
 
 func _hit(direction):
@@ -186,6 +203,9 @@ func collect(type):
 
 func _collect_drop():
 	water_count += 1
+	_update_water_count()
+
+func _update_water_count():
 	$UI/WaterDropCount.text = str(water_count)
 
 func _collect_end():
