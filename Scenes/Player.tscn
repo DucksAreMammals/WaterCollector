@@ -84,6 +84,7 @@ margin_right = 962.0
 margin_bottom = 72.0
 grow_horizontal = 0
 grow_vertical = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "0"
 align = 2
 valign = 1
