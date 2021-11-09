@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Particles/Bullet.tres" type="Material" id=1]
+
+[node name="Particles2D" type="Particles2D"]
+lifetime = 0.51
+preprocess = 1.0
+local_coords = false
+process_material = ExtResource( 1 )
