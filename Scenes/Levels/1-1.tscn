@@ -22,7 +22,7 @@ position = Vector2( 1, 0 )
 script = ExtResource( 5 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 79, 320 )
+position = Vector2( -1, 480 )
 
 [node name="EnemyBoxes" type="Area2D" parent="."]
 
@@ -77,7 +77,7 @@ position = Vector2( 575, 208 )
 [node name="DeathPlane" type="Area2D" parent="Level"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level/DeathPlane"]
-position = Vector2( -561, -368 )
+position = Vector2( -689, -384 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Level/DeathPlane"]
