@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Sprites/Water Bullet.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Entities/Water Bullet.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/WaterBullet.gd" type="Script" id=2]
 [ext_resource path="res://Particles/Bullet.tscn" type="PackedScene" id=3]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Player Idle.png-5f204e243e61c59927ae03d5c225c39c.stex"
+path="res://.import/CokeUnder6.png-1bb446d2194ef48e81b74a341be3738d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player Idle.png"
-dest_files=[ "res://.import/Player Idle.png-5f204e243e61c59927ae03d5c225c39c.stex" ]
+source_file="res://Sprites/Level/Coke/CokeUnder6.png"
+dest_files=[ "res://.import/CokeUnder6.png-1bb446d2194ef48e81b74a341be3738d.stex" ]
 
 [params]
 

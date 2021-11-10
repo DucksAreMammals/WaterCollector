@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Water Bullet.png-2e62b619c0e840c0df301e2f75104dc4.stex"
+path="res://.import/CokeTop1.png-2396cec0cb5c255d4b6aa9e65351cf7e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Water Bullet.png"
-dest_files=[ "res://.import/Water Bullet.png-2e62b619c0e840c0df301e2f75104dc4.stex" ]
+source_file="res://Sprites/Level/Coke/CokeTop1.png"
+dest_files=[ "res://.import/CokeTop1.png-2396cec0cb5c255d4b6aa9e65351cf7e.stex" ]
 
 [params]
 

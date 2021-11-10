@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Player Fall.png-339665aaab0aaaa6006c2eca89eed081.stex"
+path="res://.import/CokeTop4.png-e1052aff33625e3f1e4bde356e04c06b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player Fall.png"
-dest_files=[ "res://.import/Player Fall.png-339665aaab0aaaa6006c2eca89eed081.stex" ]
+source_file="res://Sprites/Level/Coke/CokeTop4.png"
+dest_files=[ "res://.import/CokeTop4.png-e1052aff33625e3f1e4bde356e04c06b.stex" ]
 
 [params]
 

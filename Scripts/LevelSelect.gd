@@ -1,6 +1,6 @@
 extends GridContainer
 
-var level := 2
+onready var level = Global.level
 
 func _ready():
 	var children = get_children()

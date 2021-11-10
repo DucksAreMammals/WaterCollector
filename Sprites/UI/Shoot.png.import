@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CokeUnder6.png-aabb5a97e899f44321ccefa4e0b65a43.stex"
+path="res://.import/Shoot.png-e791e59ffce1c8be742933fdfe591de7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Coke/CokeUnder6.png"
-dest_files=[ "res://.import/CokeUnder6.png-aabb5a97e899f44321ccefa4e0b65a43.stex" ]
+source_file="res://Sprites/UI/Shoot.png"
+dest_files=[ "res://.import/Shoot.png-e791e59ffce1c8be742933fdfe591de7.stex" ]
 
 [params]
 

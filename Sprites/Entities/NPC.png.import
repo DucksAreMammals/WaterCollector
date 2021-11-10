@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CokeTop3.png-15a26459d9eeb168396860e33290c0d4.stex"
+path="res://.import/NPC.png-eeb111ba100044a8eb9cb377f57c5397.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Coke/CokeTop3.png"
-dest_files=[ "res://.import/CokeTop3.png-15a26459d9eeb168396860e33290c0d4.stex" ]
+source_file="res://Sprites/Entities/NPC.png"
+dest_files=[ "res://.import/NPC.png-eeb111ba100044a8eb9cb377f57c5397.stex" ]
 
 [params]
 

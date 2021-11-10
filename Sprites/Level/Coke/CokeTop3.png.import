@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CokeTop6.png-40b29a3a9f619f6cc20706bf90a08076.stex"
+path="res://.import/CokeTop3.png-961f5f5671e881e4169614270148c509.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Coke/CokeTop6.png"
-dest_files=[ "res://.import/CokeTop6.png-40b29a3a9f619f6cc20706bf90a08076.stex" ]
+source_file="res://Sprites/Level/Coke/CokeTop3.png"
+dest_files=[ "res://.import/CokeTop3.png-961f5f5671e881e4169614270148c509.stex" ]
 
 [params]
 

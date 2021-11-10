@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/LevelEnd.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/Water Spout.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Level/Water Spout.png" type="Texture" id=2]
 [ext_resource path="res://Particles/WaterFaucet.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
