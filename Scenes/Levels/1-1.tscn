@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://Scenes/WaterFaucet.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Drop.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scripts/GameLogic.gd" type="Script" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -46,6 +47,27 @@ shape = SubResource( 2 )
 
 [node name="WaterFaucet" parent="Level" instance=ExtResource( 3 )]
 position = Vector2( 2592, 352 )
+
+[node name="Drop" parent="Level" instance=ExtResource( 4 )]
+position = Vector2( 1600, 160 )
+
+[node name="Drop2" parent="Level" instance=ExtResource( 4 )]
+position = Vector2( 1664, 160 )
+
+[node name="Drop3" parent="Level" instance=ExtResource( 4 )]
+position = Vector2( 1728, 160 )
+
+[node name="Drop4" parent="Level" instance=ExtResource( 4 )]
+position = Vector2( 1792, 160 )
+
+[node name="Drop5" parent="Level" instance=ExtResource( 4 )]
+position = Vector2( 320, 480 )
+
+[node name="Drop6" parent="Level" instance=ExtResource( 4 )]
+position = Vector2( 384, 480 )
+
+[node name="Drop7" parent="Level" instance=ExtResource( 4 )]
+position = Vector2( 448, 480 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( -1, 480 )

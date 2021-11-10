@@ -52,8 +52,6 @@ export var time_between_shots := 1000000
 
 func _ready():
 	add_to_group("player")
-# warning-ignore:return_value_discarded
-	connect("die", get_parent(), "_on_Player_die")
 
 func _process(_delta: float) -> void:
 	if Input.is_action_pressed("shoot") and next_shoot_time < OS.get_ticks_usec() \
