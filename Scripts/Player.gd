@@ -177,6 +177,10 @@ func _collide():
 			else:
 				_hit(collision.normal.x)
 		
+		# Handle falling into coke
+		if collision.collider.is_in_group("coke"):
+			_die()
+		
 func hit(direction):
 	_hit(direction)
 
