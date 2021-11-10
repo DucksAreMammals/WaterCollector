@@ -7,7 +7,7 @@ var materials = [
 func _ready():
 	for material in materials:
 		var particles_instance = Particles2D.new()
-		particles_instance.position = Vector2(-10000, -10000)
+		particles_instance.position = Vector2(-100, -100)
 		particles_instance.set_process_material(material)
 		particles_instance.set_one_shot(true)
 		particles_instance.set_emitting(true)

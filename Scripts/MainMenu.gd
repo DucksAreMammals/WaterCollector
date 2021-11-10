@@ -2,7 +2,8 @@ extends Control
 
 
 func _on_PlayButton_pressed():
-	get_tree().change_scene("res://Scenes/Levels/1-1.tscn")
+# warning-ignore:return_value_discarded
+	get_tree().change_scene("res://Scenes/Levels/1.tscn")
 
 func _on_SettingsButtons_pressed():
 	$Settings.popup_centered()

@@ -50,8 +50,14 @@ var bounce := Vector2.ZERO
 var next_shoot_time := -1
 export var time_between_shots := 1000000
 
+onready var pause = preload("res://Scenes/Pause.tscn")
+
 func _ready():
 	add_to_group("player")
+
+	var pause_instance = pause.instance()
+	$UI.add_child(pause_instance)
+
 
 func _process(_delta: float) -> void:
 	if Input.is_action_pressed("shoot") and next_shoot_time < OS.get_ticks_usec() \
