@@ -1,0 +1,411 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 24.0
+margin_top = 24.0
+margin_right = -24.0
+margin_bottom = -24.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_right = 1040.0
+margin_bottom = 585.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+margin_right = 1040.0
+margin_bottom = 64.0
+text = "Hydrohomie Adventure"
+align = 1
+
+[node name="Separator" type="Control" parent="VBoxContainer"]
+margin_top = 68.0
+margin_right = 1040.0
+margin_bottom = 182.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 186.0
+margin_right = 1040.0
+margin_bottom = 466.0
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+margin_right = 336.0
+margin_bottom = 280.0
+
+[node name="PlayButton" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_right = 336.0
+margin_bottom = 64.0
+text = "Play"
+
+[node name="Separator4" type="Control" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 68.0
+margin_right = 336.0
+margin_bottom = 68.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LevelSelectButton" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 72.0
+margin_right = 336.0
+margin_bottom = 136.0
+text = "Level Select"
+
+[node name="Separator5" type="Control" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 140.0
+margin_right = 336.0
+margin_bottom = 140.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SettingsButtons" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 144.0
+margin_right = 336.0
+margin_bottom = 208.0
+text = "Settings"
+
+[node name="Separator6" type="Control" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 212.0
+margin_right = 336.0
+margin_bottom = 212.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="QuitButton" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+margin_top = 216.0
+margin_right = 336.0
+margin_bottom = 280.0
+text = "Quit"
+
+[node name="Separator3" type="Control" parent="VBoxContainer/HBoxContainer"]
+margin_left = 340.0
+margin_right = 1040.0
+margin_bottom = 280.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Separator2" type="Control" parent="VBoxContainer"]
+margin_top = 470.0
+margin_right = 1040.0
+margin_bottom = 585.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LevelSelect" type="PopupDialog" parent="."]
+margin_right = 992.0
+margin_bottom = 537.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="LevelSelect"]
+margin_right = 992.0
+margin_bottom = 537.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="LevelSelect/VBoxContainer2"]
+margin_right = 992.0
+margin_bottom = 64.0
+text = "Select Level"
+align = 1
+
+[node name="Separator" type="Control" parent="LevelSelect/VBoxContainer2"]
+margin_top = 68.0
+margin_right = 992.0
+margin_bottom = 108.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="LevelSelect/VBoxContainer2"]
+margin_top = 112.0
+margin_right = 992.0
+margin_bottom = 380.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+columns = 7
+
+[node name="Button" type="Button" parent="LevelSelect/VBoxContainer2/GridContainer"]
+margin_right = 32.0
+margin_bottom = 64.0
+
+[node name="Button2" type="Button" parent="LevelSelect/VBoxContainer2/GridContainer"]
+margin_left = 36.0
+margin_right = 68.0
+margin_bottom = 64.0
+
+[node name="Button3" type="Button" parent="LevelSelect/VBoxContainer2/GridContainer"]
+margin_left = 72.0
+margin_right = 104.0
+margin_bottom = 64.0
+
+[node name="Button4" type="Button" parent="LevelSelect/VBoxContainer2/GridContainer"]
+margin_left = 108.0
+margin_right = 140.0
+margin_bottom = 64.0
+
+[node name="Button5" type="Button" parent="LevelSelect/VBoxContainer2/GridContainer"]
+margin_left = 144.0
+margin_right = 176.0
+margin_bottom = 64.0
+
+[node name="Button6" type="Button" parent="LevelSelect/VBoxContainer2/GridContainer"]
+margin_left = 180.0
+margin_right = 212.0
+margin_bottom = 64.0
+
+[node name="Button7" type="Button" parent="LevelSelect/VBoxContainer2/GridContainer"]
+margin_left = 216.0
+margin_right = 248.0
+margin_bottom = 64.0
+
+[node name="Button8" type="Button" parent="LevelSelect/VBoxContainer2/GridContainer"]
+margin_top = 68.0
+margin_right = 32.0
+margin_bottom = 132.0
+
+[node name="Button9" type="Button" parent="LevelSelect/VBoxContainer2/GridContainer"]
+margin_left = 36.0
+margin_top = 68.0
+margin_right = 68.0
+margin_bottom = 132.0
+
+[node name="Button10" type="Button" parent="LevelSelect/VBoxContainer2/GridContainer"]
+margin_left = 72.0
+margin_top = 68.0
+margin_right = 104.0
+margin_bottom = 132.0
+
+[node name="Button11" type="Button" parent="LevelSelect/VBoxContainer2/GridContainer"]
+margin_left = 108.0
+margin_top = 68.0
+margin_right = 140.0
+margin_bottom = 132.0
+
+[node name="Button12" type="Button" parent="LevelSelect/VBoxContainer2/GridContainer"]
+margin_left = 144.0
+margin_top = 68.0
+margin_right = 176.0
+margin_bottom = 132.0
+
+[node name="Button13" type="Button" parent="LevelSelect/VBoxContainer2/GridContainer"]
+margin_left = 180.0
+margin_top = 68.0
+margin_right = 212.0
+margin_bottom = 132.0
+
+[node name="Button14" type="Button" parent="LevelSelect/VBoxContainer2/GridContainer"]
+margin_left = 216.0
+margin_top = 68.0
+margin_right = 248.0
+margin_bottom = 132.0
+
+[node name="Button15" type="Button" parent="LevelSelect/VBoxContainer2/GridContainer"]
+margin_top = 136.0
+margin_right = 32.0
+margin_bottom = 200.0
+
+[node name="Button16" type="Button" parent="LevelSelect/VBoxContainer2/GridContainer"]
+margin_left = 36.0
+margin_top = 136.0
+margin_right = 68.0
+margin_bottom = 200.0
+
+[node name="Button17" type="Button" parent="LevelSelect/VBoxContainer2/GridContainer"]
+margin_left = 72.0
+margin_top = 136.0
+margin_right = 104.0
+margin_bottom = 200.0
+
+[node name="Button18" type="Button" parent="LevelSelect/VBoxContainer2/GridContainer"]
+margin_left = 108.0
+margin_top = 136.0
+margin_right = 140.0
+margin_bottom = 200.0
+
+[node name="Button19" type="Button" parent="LevelSelect/VBoxContainer2/GridContainer"]
+margin_left = 144.0
+margin_top = 136.0
+margin_right = 176.0
+margin_bottom = 200.0
+
+[node name="Button20" type="Button" parent="LevelSelect/VBoxContainer2/GridContainer"]
+margin_left = 180.0
+margin_top = 136.0
+margin_right = 212.0
+margin_bottom = 200.0
+
+[node name="Button21" type="Button" parent="LevelSelect/VBoxContainer2/GridContainer"]
+margin_left = 216.0
+margin_top = 136.0
+margin_right = 248.0
+margin_bottom = 200.0
+
+[node name="Button22" type="Button" parent="LevelSelect/VBoxContainer2/GridContainer"]
+margin_top = 204.0
+margin_right = 32.0
+margin_bottom = 268.0
+
+[node name="Button23" type="Button" parent="LevelSelect/VBoxContainer2/GridContainer"]
+margin_left = 36.0
+margin_top = 204.0
+margin_right = 68.0
+margin_bottom = 268.0
+
+[node name="Button24" type="Button" parent="LevelSelect/VBoxContainer2/GridContainer"]
+margin_left = 72.0
+margin_top = 204.0
+margin_right = 104.0
+margin_bottom = 268.0
+
+[node name="Button25" type="Button" parent="LevelSelect/VBoxContainer2/GridContainer"]
+margin_left = 108.0
+margin_top = 204.0
+margin_right = 140.0
+margin_bottom = 268.0
+
+[node name="Button26" type="Button" parent="LevelSelect/VBoxContainer2/GridContainer"]
+margin_left = 144.0
+margin_top = 204.0
+margin_right = 176.0
+margin_bottom = 268.0
+
+[node name="Button27" type="Button" parent="LevelSelect/VBoxContainer2/GridContainer"]
+margin_left = 180.0
+margin_top = 204.0
+margin_right = 212.0
+margin_bottom = 268.0
+
+[node name="Button28" type="Button" parent="LevelSelect/VBoxContainer2/GridContainer"]
+margin_left = 216.0
+margin_top = 204.0
+margin_right = 248.0
+margin_bottom = 268.0
+
+[node name="Separator3" type="Control" parent="LevelSelect/VBoxContainer2"]
+margin_top = 384.0
+margin_right = 992.0
+margin_bottom = 424.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="LevelSelect/VBoxContainer2"]
+margin_top = 428.0
+margin_right = 992.0
+margin_bottom = 492.0
+
+[node name="Separator" type="Control" parent="LevelSelect/VBoxContainer2/HBoxContainer"]
+margin_right = 420.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="BackButton" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer"]
+margin_left = 424.0
+margin_right = 568.0
+margin_bottom = 64.0
+text = "Back"
+
+[node name="Separator2" type="Control" parent="LevelSelect/VBoxContainer2/HBoxContainer"]
+margin_left = 572.0
+margin_right = 992.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Separator2" type="Control" parent="LevelSelect/VBoxContainer2"]
+margin_top = 496.0
+margin_right = 992.0
+margin_bottom = 537.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Settings" type="PopupDialog" parent="."]
+margin_right = 992.0
+margin_bottom = 537.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Settings"]
+margin_right = 992.0
+margin_bottom = 537.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Settings/VBoxContainer2"]
+margin_right = 992.0
+margin_bottom = 64.0
+text = "Settings"
+align = 1
+
+[node name="Separator" type="Control" parent="Settings/VBoxContainer2"]
+margin_top = 68.0
+margin_right = 992.0
+margin_bottom = 199.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Separator3" type="Control" parent="Settings/VBoxContainer2"]
+margin_top = 203.0
+margin_right = 992.0
+margin_bottom = 334.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Settings/VBoxContainer2"]
+margin_top = 338.0
+margin_right = 992.0
+margin_bottom = 402.0
+
+[node name="Separator" type="Control" parent="Settings/VBoxContainer2/HBoxContainer"]
+margin_right = 420.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="BackButton" type="Button" parent="Settings/VBoxContainer2/HBoxContainer"]
+margin_left = 424.0
+margin_right = 568.0
+margin_bottom = 64.0
+text = "Back"
+
+[node name="Separator2" type="Control" parent="Settings/VBoxContainer2/HBoxContainer"]
+margin_left = 572.0
+margin_right = 992.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Separator2" type="Control" parent="Settings/VBoxContainer2"]
+margin_top = 406.0
+margin_right = 992.0
+margin_bottom = 537.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/LevelSelectButton" to="." method="_on_LevelSelectButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/SettingsButtons" to="." method="_on_SettingsButtons_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="LevelSelect/VBoxContainer2/HBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="pressed" from="Settings/VBoxContainer2/HBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]

@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tileset.tres" type="TileSet" id=2]
-[ext_resource path="res://Scenes/WaterFaucet.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Drop.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Level Objects/WaterFaucet.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Level Objects/Drop.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scripts/GameLogic.gd" type="Script" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -95,7 +95,7 @@ position = Vector2( 3296, 544 )
 position = Vector2( 3360, 544 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( -1, 480 )
+position = Vector2( 0, 544 )
 
 [connection signal="body_entered" from="Level/DeathPlane" to="Player" method="_on_DeathPlane_body_entered"]
 [connection signal="finish" from="Level/WaterFaucet" to="." method="_on_WaterFaucet_finish"]
