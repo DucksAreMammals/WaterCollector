@@ -48,7 +48,7 @@ var invincible_until := -1.0
 var bounce := Vector2.ZERO
 
 var next_shoot_time := -1
-export var time_between_shots := 1000000
+export var time_between_shots := 250000
 
 onready var pause = preload("res://Scenes/Pause.tscn")
 
@@ -57,6 +57,9 @@ func _ready():
 
 	var pause_instance = pause.instance()
 	$UI.add_child(pause_instance)
+	
+	water_count = Global.water_count
+	_update_water_count()
 
 
 func _process(_delta: float) -> void:
@@ -205,6 +208,10 @@ func _update_health():
 
 func _die():
 	emit_signal("die")
+	
+	water_count = 0
+	Global.water_count = 0
+	Global.save_to_file()
 
 func collect(type):
 	match type:
@@ -217,6 +224,8 @@ func _collect_drop():
 
 func _update_water_count():
 	$UI/WaterDropCount.text = str(water_count)
+	
+	Global.water_count = water_count
 	
 func _on_DeathPlane_body_entered(body):
 	if body == self:
