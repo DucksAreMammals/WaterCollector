@@ -5,10 +5,10 @@
 [ext_resource path="res://Sprites/UI/Run.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 12, 12 )
+extents = Vector2( 12, 24 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 15, 15 )
+extents = Vector2( 17, 17 )
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
