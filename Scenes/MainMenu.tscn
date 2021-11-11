@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/LevelSelect.gd" type="Script" id=2]
 [ext_resource path="res://Fonts/PixelOperator.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Themes/Theme.tres" type="Theme" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -17,6 +18,7 @@ margin_left = 24.0
 margin_top = 24.0
 margin_right = -24.0
 margin_bottom = -24.0
+theme = ExtResource( 4 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -38,73 +40,73 @@ align = 1
 [node name="Separator" type="Control" parent="VBoxContainer"]
 margin_top = 60.0
 margin_right = 1040.0
-margin_bottom = 182.0
+margin_bottom = 194.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 186.0
+margin_top = 198.0
 margin_right = 1040.0
-margin_bottom = 458.0
+margin_bottom = 446.0
 size_flags_vertical = 3
 
 [node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
-margin_right = 316.0
-margin_bottom = 272.0
+margin_right = 336.0
+margin_bottom = 248.0
 
 [node name="PlayButton" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
-margin_right = 316.0
-margin_bottom = 62.0
+margin_right = 336.0
+margin_bottom = 56.0
 text = "Play"
 
 [node name="Separator4" type="Control" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
-margin_top = 66.0
-margin_right = 316.0
-margin_bottom = 66.0
+margin_top = 60.0
+margin_right = 336.0
+margin_bottom = 60.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="LevelSelectButton" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
-margin_top = 70.0
-margin_right = 316.0
-margin_bottom = 132.0
+margin_top = 64.0
+margin_right = 336.0
+margin_bottom = 120.0
 text = "Level Select"
 
 [node name="Separator5" type="Control" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
-margin_top = 136.0
-margin_right = 316.0
-margin_bottom = 136.0
+margin_top = 124.0
+margin_right = 336.0
+margin_bottom = 124.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="SettingsButtons" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
-margin_top = 140.0
-margin_right = 316.0
-margin_bottom = 202.0
+margin_top = 128.0
+margin_right = 336.0
+margin_bottom = 184.0
 text = "Settings"
 
 [node name="Separator6" type="Control" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
-margin_top = 206.0
-margin_right = 316.0
-margin_bottom = 206.0
+margin_top = 188.0
+margin_right = 336.0
+margin_bottom = 188.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="QuitButton" type="Button" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
-margin_top = 210.0
-margin_right = 316.0
-margin_bottom = 272.0
+margin_top = 192.0
+margin_right = 336.0
+margin_bottom = 248.0
 text = "Quit"
 
 [node name="Separator3" type="Control" parent="VBoxContainer/HBoxContainer"]
-margin_left = 320.0
+margin_left = 340.0
 margin_right = 1040.0
-margin_bottom = 272.0
+margin_bottom = 248.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Separator2" type="Control" parent="VBoxContainer"]
-margin_top = 462.0
+margin_top = 450.0
 margin_right = 1040.0
 margin_bottom = 585.0
 size_flags_horizontal = 3
@@ -335,7 +337,7 @@ align = 1
 [node name="Separator" type="Control" parent="Settings/VBoxContainer2"]
 margin_top = 60.0
 margin_right = 992.0
-margin_bottom = 130.0
+margin_bottom = 137.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
@@ -343,32 +345,32 @@ __meta__ = {
 }
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Settings/VBoxContainer2"]
-margin_top = 134.0
+margin_top = 141.0
 margin_right = 992.0
-margin_bottom = 323.0
+margin_bottom = 315.0
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="Settings/VBoxContainer2/HBoxContainer2"]
 margin_right = 468.0
-margin_bottom = 189.0
+margin_bottom = 174.0
 size_flags_horizontal = 3
 
 [node name="Label" type="Label" parent="Settings/VBoxContainer2/HBoxContainer2/HBoxContainer3"]
-margin_top = 66.0
+margin_top = 59.0
 margin_right = 160.0
-margin_bottom = 122.0
+margin_bottom = 115.0
 text = "Music:"
 
 [node name="MusicSlider" type="HSlider" parent="Settings/VBoxContainer2/HBoxContainer2/HBoxContainer3"]
 margin_left = 164.0
 margin_right = 468.0
-margin_bottom = 189.0
+margin_bottom = 174.0
 size_flags_horizontal = 3
 size_flags_vertical = 1
 
 [node name="Separator4" type="Control" parent="Settings/VBoxContainer2/HBoxContainer2"]
 margin_left = 472.0
 margin_right = 519.0
-margin_bottom = 189.0
+margin_bottom = 174.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.1
@@ -379,50 +381,50 @@ __meta__ = {
 [node name="HBoxContainer4" type="HBoxContainer" parent="Settings/VBoxContainer2/HBoxContainer2"]
 margin_left = 523.0
 margin_right = 992.0
-margin_bottom = 189.0
+margin_bottom = 174.0
 size_flags_horizontal = 3
 
 [node name="Label" type="Label" parent="Settings/VBoxContainer2/HBoxContainer2/HBoxContainer4"]
 margin_right = 469.0
-margin_bottom = 189.0
+margin_bottom = 174.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 1 )
 text = "Again, Once Again by fluffy (c) copyright 2016 Licensed under a Creative Commons Attribution (3.0) license. http://dig.ccmixter.org/files/fluffy/53739 "
 autowrap = true
 
 [node name="Separator3" type="Control" parent="Settings/VBoxContainer2"]
-margin_top = 327.0
+margin_top = 319.0
 margin_right = 992.0
-margin_bottom = 397.0
+margin_bottom = 396.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Settings/VBoxContainer2"]
-margin_top = 401.0
+margin_top = 400.0
 margin_right = 992.0
-margin_bottom = 463.0
+margin_bottom = 456.0
 
 [node name="Separator" type="Control" parent="Settings/VBoxContainer2/HBoxContainer"]
-margin_right = 430.0
-margin_bottom = 62.0
+margin_right = 420.0
+margin_bottom = 56.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="BackButton" type="Button" parent="Settings/VBoxContainer2/HBoxContainer"]
-margin_left = 434.0
-margin_right = 558.0
-margin_bottom = 62.0
+margin_left = 424.0
+margin_right = 568.0
+margin_bottom = 56.0
 text = "Back"
 
 [node name="Separator2" type="Control" parent="Settings/VBoxContainer2/HBoxContainer"]
-margin_left = 562.0
+margin_left = 572.0
 margin_right = 992.0
-margin_bottom = 62.0
+margin_bottom = 56.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Separator2" type="Control" parent="Settings/VBoxContainer2"]
-margin_top = 467.0
+margin_top = 460.0
 margin_right = 992.0
 margin_bottom = 537.0
 size_flags_horizontal = 3
