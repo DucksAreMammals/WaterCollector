@@ -19,14 +19,16 @@ func _physics_process(delta):
 	if raycast_left.is_colliding():
 		if raycast_left.get_collider().is_in_group("player"):
 			raycast_left.get_collider().hit(-1)
-		
-		direction = 1
+			direction = 1
+		elif raycast_left.get_collider().is_in_group("enemybox"):
+			direction = 1
 		
 	if raycast_right.is_colliding():
 		if raycast_right.get_collider().is_in_group("player"):
 			raycast_right.get_collider().hit(1)
-		
-		direction = -1
+			direction = -1
+		elif raycast_right.get_collider().is_in_group("enemybox"):
+			direction = -1
 	
 	velocity.x = direction * speed
 	

@@ -19,7 +19,7 @@ collision_layer = 2
 collision_mask = 0
 format = 1
 
-[node name="TileMap" type="TileMap" parent="Level"]
+[node name="TileMap" type="TileMap" parent="Level" groups=["enemybox"]]
 scale = Vector2( 4, 4 )
 tile_set = ExtResource( 2 )
 cell_size = Vector2( 16, 16 )
@@ -34,7 +34,7 @@ format = 1
 
 [node name="DeathPlane" type="Area2D" parent="Level"]
 
-[node name="EnemyBoxes" type="Area2D" parent="Level"]
+[node name="EnemyBoxes" type="Area2D" parent="Level" groups=["enemybox"]]
 
 [node name="WaterFaucet" parent="Level" instance=ExtResource( 3 )]
 position = Vector2( 416, 480 )

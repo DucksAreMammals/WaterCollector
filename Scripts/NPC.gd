@@ -5,7 +5,7 @@ export var text := ""
 var i = 0.0
 
 func _process(delta):
-	i += delta * 25
+	i += delta * 50
 	
 	$CanvasLayer/TextBox/Label.text = text.left(i)
 
