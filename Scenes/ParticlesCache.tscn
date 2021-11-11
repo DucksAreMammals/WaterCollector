@@ -2,5 +2,6 @@
 
 [ext_resource path="res://Scripts/ParticlesCache.gd" type="Script" id=1]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="Node2D" type="Node2D"]
+z_index = -10
 script = ExtResource( 1 )
