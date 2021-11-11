@@ -312,7 +312,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Settings" type="PopupDialog" parent="."]
-visible = true
 margin_right = 992.0
 margin_bottom = 537.0
 __meta__ = {

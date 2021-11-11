@@ -34,6 +34,8 @@ format = 1
 
 [node name="DeathPlane" type="Area2D" parent="Level"]
 
+[node name="EnemyBoxes" type="Area2D" parent="Level"]
+
 [node name="WaterFaucet" parent="Level" instance=ExtResource( 3 )]
 position = Vector2( 416, 480 )
 

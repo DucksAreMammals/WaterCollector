@@ -10,6 +10,7 @@ extents = Vector2( 48, 28 )
 
 [node name="NPC" type="Node2D"]
 script = ExtResource( 2 )
+text = "Hello. How are you. The water turned off again. You need to go turn it off and turn it on again."
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 4, 4 )
@@ -21,34 +22,31 @@ texture = ExtResource( 1 )
 position = Vector2( -16, 4 )
 shape = SubResource( 1 )
 
-[node name="TextBox" type="ColorRect" parent="."]
-visible = false
-self_modulate = Color( 0, 0, 0, 1 )
-margin_left = -165.6
-margin_top = -138.0
-margin_right = 50.4
-margin_bottom = -34.0
-rect_rotation = -7.2
-rect_scale = Vector2( 0.92, 0.92 )
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../CanvasLayer/TextBox")
+anims/in = ExtResource( 4 )
+anims/out = ExtResource( 3 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextBox" type="ColorRect" parent="CanvasLayer"]
+margin_top = 584.0
+margin_right = 1040.0
+margin_bottom = 752.001
+color = Color( 0.247059, 0.211765, 0.211765, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="TextBox"]
-margin_right = 216.0
-margin_bottom = 104.0
-text = "Help us! The water tower broke and now everything is dying! The people are dehydrated and are trying to get any form of liquid they can! They will drink your blood! AAAAAAAAAAAAAAAA!"
-align = 1
+[node name="Label" type="Label" parent="CanvasLayer/TextBox"]
+margin_left = 16.0
+margin_right = 1024.0
+margin_bottom = 168.0
 valign = 1
 autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../TextBox")
-anims/in = ExtResource( 4 )
-anims/out = ExtResource( 3 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

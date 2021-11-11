@@ -40,10 +40,16 @@ cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 262168, 0, 0, 262169, 0, 0, 262170, 0, 0, 262171, 0, 0, 262172, 0, 0, 262173, 0, 0, 262174, 0, 0, 262175, 0, 0, 262176, 0, 0, 327704, 1, 0, 327705, 1, 0, 327706, 1, 0, 327707, 1, 0, 327708, 1, 0, 327709, 1, 0, 327710, 1, 0, 327711, 1, 0, 327712, 1, 0, 393240, 1, 0, 393241, 1, 0, 393242, 1, 0, 393243, 1, 0, 393244, 1, 0, 393245, 1, 0, 393246, 1, 0, 393247, 1, 0, 393248, 1, 0, 458776, 1, 0, 458777, 1, 0, 458778, 1, 0, 458779, 1, 0, 458780, 1, 0, 458781, 1, 0, 458782, 1, 0, 458783, 1, 0, 458784, 1, 0, 524312, 1, 0, 524313, 1, 0, 524314, 1, 0, 524315, 1, 0, 524316, 1, 0, 524317, 1, 0, 524318, 1, 0, 524319, 1, 0, 524320, 1, 0 )
 
+[node name="EnemyBoxes" type="Area2D" parent="Level"]
+
 [node name="DeathPlane" type="Area2D" parent="Level"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level/DeathPlane"]
-position = Vector2( -743, 787 )
+position = Vector2( -861.66, 808.189 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Level/DeathPlane"]
+position = Vector2( 4846.73, 791.238 )
 shape = SubResource( 1 )
 
 [node name="WaterFaucet" parent="Level" instance=ExtResource( 3 )]

@@ -27,7 +27,6 @@ func _on_MusicSlider_value_changed(value):
 	Global.music_level = value
 	Global.save_to_file()
 
-
 func _on_FPSBox_toggled(button_pressed):
 	Global.show_fps = button_pressed
 	Global.save_to_file()

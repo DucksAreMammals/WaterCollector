@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tileset.tres" type="TileSet" id=2]
@@ -6,12 +6,17 @@
 [ext_resource path="res://Scenes/Level Objects/Drop.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scripts/GameLogic.gd" type="Script" id=5]
 [ext_resource path="res://HurtTileset.tres" type="TileSet" id=6]
+[ext_resource path="res://Scenes/Level Objects/Enemy.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Level Objects/NPC.tscn" type="PackedScene" id=8]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 450, 82.5 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 685, 156.5 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 19, 68.5 )
 
 [node name="Level" type="Node2D"]
 script = ExtResource( 5 )
@@ -26,7 +31,7 @@ cell_size = Vector2( 16, 16 )
 collision_layer = 2
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( 196631, 5, 0, 196632, 536870918, 0, 196633, 536870918, 0, 196634, 536870918, 0, 196635, 536870918, 0, 196636, 536870918, 0, 196637, 536870917, 0, 262167, 1, 0, 262168, 536870915, 0, 262169, 536870915, 0, 262170, 536870915, 0, 262171, 536870915, 0, 262172, 536870915, 0, 262173, 536870913, 0, 327703, 1, 0, 327704, 536870915, 0, 327705, 536870915, 0, 327706, 536870915, 0, 327707, 536870915, 0, 327708, 536870915, 0, 327709, 536870913, 0, 393239, 1, 0, 393240, 536870915, 0, 393241, 536870913, 0, 458775, 1, 0, 458776, 536870915, 0, 458777, 536870913, 0 )
+tile_data = PoolIntArray( 196631, 5, 0, 196632, 536870918, 0, 196633, 536870918, 0, 196634, 536870918, 0, 196635, 536870918, 0, 196636, 536870917, 0, 262167, 1, 0, 262168, 536870915, 0, 262169, 536870915, 0, 262170, 536870915, 0, 262171, 536870915, 0, 262172, 536870913, 0, 327703, 1, 0, 327704, 536870915, 0, 327705, 536870915, 0, 327706, 536870915, 0, 327707, 536870915, 0, 327708, 536870913, 0, 393239, 1, 0, 393240, 536870915, 0, 393241, 536870913, 0, 458775, 1, 0, 458776, 536870915, 0, 458777, 536870913, 0 )
 
 [node name="TileMap" type="TileMap" parent="Level"]
 scale = Vector2( 4, 4 )
@@ -69,13 +74,25 @@ position = Vector2( 1728, 160 )
 position = Vector2( 1792, 160 )
 
 [node name="Drop5" parent="Level" instance=ExtResource( 4 )]
-position = Vector2( 320, 480 )
+position = Vector2( 512, 480 )
 
 [node name="Drop6" parent="Level" instance=ExtResource( 4 )]
 position = Vector2( 384, 480 )
 
 [node name="Drop7" parent="Level" instance=ExtResource( 4 )]
 position = Vector2( 448, 480 )
+
+[node name="Enemy" parent="Level" instance=ExtResource( 7 )]
+position = Vector2( 1440, 480 )
+
+[node name="EnemyBoxes" type="Area2D" parent="Level"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level/EnemyBoxes"]
+position = Vector2( 1328, 448 )
+shape = SubResource( 3 )
+
+[node name="NPC" parent="Level/EnemyBoxes/CollisionShape2D" instance=ExtResource( 8 )]
+position = Vector2( -1152, 32 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( -1, 480 )
