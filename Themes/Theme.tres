@@ -17,10 +17,10 @@ bg_color = Color( 0.286275, 0.266667, 0.227451, 1 )
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.14902, 0.137255, 0.113725, 1 )
 
-[sub_resource type="StyleBoxLine" id=6]
+[sub_resource type="StyleBoxLine" id=5]
 thickness = 10
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.678431, 0.552941, 0.403922, 1 )
 
 [resource]
@@ -41,9 +41,9 @@ HSlider/icons/grabber = ExtResource( 2 )
 HSlider/icons/grabber_disabled = ExtResource( 2 )
 HSlider/icons/grabber_highlight = ExtResource( 2 )
 HSlider/icons/tick = null
-HSlider/styles/grabber_area = SubResource( 6 )
-HSlider/styles/grabber_area_highlight = SubResource( 6 )
-HSlider/styles/slider = SubResource( 6 )
+HSlider/styles/grabber_area = SubResource( 5 )
+HSlider/styles/grabber_area_highlight = SubResource( 5 )
+HSlider/styles/slider = SubResource( 5 )
 Label/colors/font_color = Color( 1, 1, 1, 1 )
 Label/colors/font_color_shadow = Color( 0, 0, 0, 1 )
 Label/colors/font_outline_modulate = Color( 0, 0, 0, 1 )
@@ -53,4 +53,4 @@ Label/constants/shadow_offset_x = 0
 Label/constants/shadow_offset_y = 0
 Label/fonts/font = null
 Label/styles/normal = null
-PopupDialog/styles/panel = SubResource( 5 )
+PopupDialog/styles/panel = SubResource( 6 )

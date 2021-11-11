@@ -10,6 +10,7 @@ var level
 var music_level
 
 func _ready():
+	print("ready")
 	load_from_file()
 
 func save_to_file():
@@ -33,3 +34,5 @@ func load_from_file():
 		level = 1
 		music_level = 80
 		save_to_file()
+
+	$"/root/SoundHandler".update_music_volume()
