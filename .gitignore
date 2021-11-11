@@ -9,3 +9,6 @@ export_presets.cfg
 data_*/
 
 .vscode/
+
+android/build/*
+!android/build/AndroidManifest.xml
