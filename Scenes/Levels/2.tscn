@@ -12,10 +12,11 @@
 extents = Vector2( 16, 72 )
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 450, 82.5 )
+extents = Vector2( 1437, 82.5 )
 
 [node name="Level" type="Node2D"]
 script = ExtResource( 5 )
+next_level = 2
 level_name = "1-2"
 
 [node name="Level" type="Node2D" parent="."]
@@ -92,7 +93,7 @@ position = Vector2( -861.66, 808.189 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Level/DeathPlane"]
-position = Vector2( 7599.07, 708.177 )
+position = Vector2( 7747, 952 )
 shape = SubResource( 1 )
 
 [node name="WaterFaucet" parent="Level" instance=ExtResource( 3 )]

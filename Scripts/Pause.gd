@@ -1,5 +1,13 @@
-extends Control
+extends CanvasLayer
 
+
+func _process(_delta):
+	if Input.is_action_just_pressed("continue"):
+		if $PopupDialog.visible:
+			_on_ResumeButton_pressed()
+		else:
+			_on_PauseButton_pressed()
+	
 func _on_PauseButton_pressed():
 	get_tree().paused = true
 	$PopupDialog.popup_centered()
