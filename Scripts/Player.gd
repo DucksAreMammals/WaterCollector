@@ -2,8 +2,8 @@ extends KinematicBody2D
 
 signal die
 
-export (Texture) var full_heart
-export (Texture) var empty_heart
+export(Texture) var full_heart
+export(Texture) var empty_heart
 
 export var move_speed_reg := 7500.0
 export var move_speed_run := 15000.0
@@ -52,27 +52,30 @@ export var time_between_shots := 250000
 
 onready var pause = preload("res://Scenes/Pause.tscn")
 
+
 func _ready():
 	add_to_group("player")
 
 	var pause_instance = pause.instance()
 	$UI.add_child(pause_instance)
-	
+
 	water_count = Global.water_count
 	_update_water_count()
 
 
 func _process(_delta: float) -> void:
-	if Input.is_action_pressed("shoot") and next_shoot_time < OS.get_ticks_usec() \
-		and water_count > 0:
-		
+	if (
+		Input.is_action_pressed("shoot")
+		and next_shoot_time < OS.get_ticks_usec()
+		and water_count > 0
+	):
 		water_count -= 1
 		_update_water_count()
-		
+
 		next_shoot_time = OS.get_ticks_usec() + time_between_shots
 		var bullet_instance = bullet.instance()
 		bullet_instance.direction = -1 if $AnimatedSprite.flip_h else 1
-		bullet_instance.position = position + Vector2(bullet_instance.direction * 10, 0) 
+		bullet_instance.position = position + Vector2(bullet_instance.direction * 10, 0)
 		get_parent().add_child(bullet_instance)
 
 	change_animation()
@@ -81,18 +84,23 @@ func _process(_delta: float) -> void:
 		var time_left = invincible_until - OS.get_ticks_usec()
 # I don't know how to fix this so I'm ignoring it. Hopefully it doesn't break things
 # warning-ignore:integer_division
-		visible = int(time_left) % time_between_invincibility_blinks < time_between_invincibility_blinks / 2 
+		visible = (
+			int(time_left) % time_between_invincibility_blinks
+			< time_between_invincibility_blinks / 2
+		)
+
 
 func _physics_process(delta: float) -> void:
 	_move(delta)
 	_collide()
+
 
 func change_animation():
 	if velocity.x > 0:
 		$AnimatedSprite.flip_h = false
 	elif velocity.x < 0:
 		$AnimatedSprite.flip_h = true
-	
+
 	if !is_on_floor():
 		if velocity.y <= 0:
 			$AnimatedSprite.play("jump")
@@ -103,18 +111,24 @@ func change_animation():
 	else:
 		$AnimatedSprite.play("idle")
 
+
 func _move(delta):
 	# Handle passthrough collisions
-	if not Input.is_action_pressed("down") and \
-		(passthrough_raycast_down_left.is_colliding() or
-		passthrough_raycast_down_right.is_colliding()) and not \
-		(passthrough_raycast_up_left.is_colliding() or
-		passthrough_raycast_up_right.is_colliding()):
-			
+	if (
+		not Input.is_action_pressed("down")
+		and (
+			passthrough_raycast_down_left.is_colliding()
+			or passthrough_raycast_down_right.is_colliding()
+		)
+		and not (
+			passthrough_raycast_up_left.is_colliding()
+			or passthrough_raycast_up_right.is_colliding()
+		)
+	):
 		set_collision_mask_bit(1, true)
 	else:
 		set_collision_mask_bit(1, false)
-	
+
 	# Handle run input
 	if Input.is_action_pressed("run"):
 		move_speed = move_speed_run
@@ -122,70 +136,85 @@ func _move(delta):
 	else:
 		move_speed = move_speed_reg
 		air_speed = air_speed_reg
-	
+
 	# Handle left and right inputs
 	if is_on_floor():
 		velocity.x *= friction
-		velocity.x += (Input.get_action_strength("right") - Input.get_action_strength("left")) * move_speed * delta
+		velocity.x += (
+			(Input.get_action_strength("right") - Input.get_action_strength("left"))
+			* move_speed
+			* delta
+		)
 	else:
 		velocity.x *= air_resistance
-		velocity.x += (Input.get_action_strength("right") - Input.get_action_strength("left")) * air_speed * delta
-	
+		velocity.x += (
+			(Input.get_action_strength("right") - Input.get_action_strength("left"))
+			* air_speed
+			* delta
+		)
+
 	# Handle jump
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		jump_continue += delta
 		velocity.y = -jump_speed
 		snapping = Vector2.ZERO
-	elif Input.is_action_pressed("jump") and jump_continue > 0 and jump_continue < jump_continue_limit:
+	elif (
+		Input.is_action_pressed("jump")
+		and jump_continue > 0
+		and jump_continue < jump_continue_limit
+	):
 		jump_continue += delta
 		velocity.y = -jump_speed
 	else:
 		jump_continue = 0
 		snapping = Vector2.DOWN * 5
-	
+
 	# Handle hitting ceiling
 	if is_on_ceiling():
-		jump_continue = 0;
-	
+		jump_continue = 0
+
 	# Handle bouncing off of enemies
 	if bounce.length_squared() > 0:
 		velocity += bounce
 		bounce = Vector2.ZERO
 		snapping = Vector2.ZERO
-	
+
 	# Handle gravity
 	velocity.y += gravity * delta
-	
+
 	# Move
 	velocity = move_and_slide_with_snap(velocity, snapping, Vector2.UP, true)
+
 
 func _collide():
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
-		
+
 		# Handle enemy collisions
 		if collision.collider.is_in_group("enemy"):
 			if collision.normal.y < 0:
 				# Bounce off of enemy
 				collision.collider.hit(0)
-				
+
 				if Input.is_action_pressed("jump"):
 					bounce.y = -jump_speed
 				else:
 					bounce.y = -y_hurt_bounce_speed
-				
+
 				bounce.x = x_attack_bounce_speed
-				
+
 				$Camera.shake()
 			else:
 				_hit(collision.normal.x)
-		
+
 		# Handle falling into coke
 		if collision.collider.is_in_group("coke"):
 			_die()
-		
+
+
 func hit(direction):
 	_hit(direction)
+
 
 func _hit(direction):
 	if invincible_until < OS.get_ticks_usec():
@@ -194,39 +223,45 @@ func _hit(direction):
 		health -= 1
 		if health <= 0:
 			_die()
-		
+
 		bounce.y = -y_hurt_bounce_speed
 		bounce.x = direction * x_hurt_bounce_speed
-		
+
 		$Camera.shake()
 		_update_health()
+
 
 func _update_health():
 	$UI/Heart3.texture = full_heart if health >= 3 else empty_heart
 	$UI/Heart2.texture = full_heart if health >= 2 else empty_heart
 	$UI/Heart1.texture = full_heart if health >= 1 else empty_heart
 
+
 func _die():
 	emit_signal("die")
-	
+
 	water_count = 0
 	Global.water_count = 0
 	Global.save_to_file()
+
 
 func collect(type):
 	match type:
 		1:
 			_collect_drop()
 
+
 func _collect_drop():
 	water_count += 1
 	_update_water_count()
 
+
 func _update_water_count():
 	$UI/WaterDropCount.text = str(water_count)
-	
+
 	Global.water_count = water_count
-	
+
+
 func _on_DeathPlane_body_entered(body):
 	if body == self:
 		health = 0

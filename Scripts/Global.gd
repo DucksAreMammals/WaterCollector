@@ -13,12 +13,14 @@ var water_count
 var music_level
 var show_fps
 
+
 func _ready():
 	load_from_file()
 
+
 func save_to_file():
 	$"/root/SoundHandler".update_music_volume()
-	
+
 	var file = File.new()
 	file.open(save_file, File.WRITE)
 	file.store_var(level)

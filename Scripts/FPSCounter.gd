@@ -1,5 +1,6 @@
 extends CanvasLayer
 
+
 func _process(_delta):
 	if Global.show_fps:
 		$Label.visible = true

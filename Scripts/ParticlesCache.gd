@@ -6,6 +6,7 @@ var materials = [
 	preload("res://Particles/Bullet.tres")
 ]
 
+
 func _ready():
 	for material in materials:
 		var particles_instance = Particles2D.new()
