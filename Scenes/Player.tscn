@@ -9,7 +9,7 @@
 [ext_resource path="res://Scenes/MobileControls.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 8, 32 )
+extents = Vector2( 8, 30.0155 )
 
 [node name="Player" type="KinematicBody2D" groups=["player"]]
 position = Vector2( 2.83162, -6.60712 )
@@ -26,6 +26,7 @@ frames = ExtResource( 1 )
 animation = "run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 1.98452 )
 shape = SubResource( 1 )
 
 [node name="Camera" type="Camera2D" parent="."]
