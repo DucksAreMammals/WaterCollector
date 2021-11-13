@@ -5,11 +5,10 @@ export var level_name := "1-1"
 
 
 func _on_WaterFaucet_finish():
-	if next_level >= 1:
-		Global.level = next_level
-		Global.save_to_file()
+	Global.level = next_level
+	Global.save_to_file()
 
-		$"/root/LevelEnd".on_win()
+	$"/root/LevelEnd".on_win()
 
 
 func _on_Player_die():
