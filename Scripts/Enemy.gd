@@ -2,6 +2,7 @@ extends KinematicBody2D
 
 export var health := 1
 export var speed := 50.0
+export var flying := false
 
 export var gravity := 1700
 
@@ -35,13 +36,16 @@ func _physics_process(delta):
 		elif raycast_right.get_collider().is_in_group("enemybox") or \
 			raycast_right.get_collider().is_in_group("enemy"):
 			direction = -1
-
-	velocity.x = direction * speed
-
+			
 	velocity.y *= 0.96
 	velocity.y += gravity * delta
-
-	velocity = move_and_slide_with_snap(velocity, snapping, Vector2.UP, true)
+	
+	if flying:
+		velocity.x = direction * speed * delta
+		move_and_collide(velocity)
+	else:
+		velocity.x = direction * speed
+		velocity = move_and_slide_with_snap(velocity, snapping, Vector2.UP, true)
 
 
 func _process(_delta):
