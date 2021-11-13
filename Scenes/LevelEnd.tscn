@@ -85,21 +85,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LooseDialog" type="PopupDialog" parent="."]
+[node name="LoseDialog" type="PopupDialog" parent="."]
 margin_right = 585.0
 margin_bottom = 585.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="LooseDialog"]
+[node name="HBoxContainer" type="HBoxContainer" parent="LoseDialog"]
 margin_right = 585.0
 margin_bottom = 585.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Control3" type="Control" parent="LooseDialog/HBoxContainer"]
+[node name="Control3" type="Control" parent="LoseDialog/HBoxContainer"]
 margin_right = 158.0
 margin_bottom = 585.0
 size_flags_horizontal = 3
@@ -108,7 +108,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="LooseDialog/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="LoseDialog/HBoxContainer"]
 margin_left = 162.0
 margin_right = 422.0
 margin_bottom = 585.0
@@ -116,13 +116,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="LooseDialog/HBoxContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="LoseDialog/HBoxContainer/VBoxContainer"]
 margin_right = 260.0
 margin_bottom = 56.0
 text = "You Loose!"
 align = 1
 
-[node name="RestartButton" type="Button" parent="LooseDialog/HBoxContainer/VBoxContainer"]
+[node name="RestartButton" type="Button" parent="LoseDialog/HBoxContainer/VBoxContainer"]
 margin_top = 60.0
 margin_right = 260.0
 margin_bottom = 116.0
@@ -131,7 +131,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MenuButton" type="Button" parent="LooseDialog/HBoxContainer/VBoxContainer"]
+[node name="MenuButton" type="Button" parent="LoseDialog/HBoxContainer/VBoxContainer"]
 margin_top = 120.0
 margin_right = 260.0
 margin_bottom = 176.0
@@ -140,7 +140,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Control6" type="Control" parent="LooseDialog/HBoxContainer/VBoxContainer"]
+[node name="Control6" type="Control" parent="LoseDialog/HBoxContainer/VBoxContainer"]
 margin_top = 180.0
 margin_right = 260.0
 margin_bottom = 585.0
@@ -150,7 +150,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Control4" type="Control" parent="LooseDialog/HBoxContainer"]
+[node name="Control4" type="Control" parent="LoseDialog/HBoxContainer"]
 margin_left = 426.0
 margin_right = 585.0
 margin_bottom = 585.0
@@ -164,6 +164,6 @@ __meta__ = {
 [connection signal="pressed" from="WinDialog/HBoxContainer/VBoxContainer/NextLevelButton" to="." method="_on_NextLevelButton_pressed"]
 [connection signal="pressed" from="WinDialog/HBoxContainer/VBoxContainer/RestartButton" to="." method="_on_RestartButton_pressed"]
 [connection signal="pressed" from="WinDialog/HBoxContainer/VBoxContainer/MenuButton" to="." method="_on_MenuButton_pressed"]
-[connection signal="popup_hide" from="LooseDialog" to="." method="_on_LooseDialog_popup_hide"]
-[connection signal="pressed" from="LooseDialog/HBoxContainer/VBoxContainer/RestartButton" to="." method="_on_RestartButton_pressed"]
-[connection signal="pressed" from="LooseDialog/HBoxContainer/VBoxContainer/MenuButton" to="." method="_on_MenuButton_pressed"]
+[connection signal="popup_hide" from="LoseDialog" to="." method="_on_LoseDialog_popup_hide"]
+[connection signal="pressed" from="LoseDialog/HBoxContainer/VBoxContainer/RestartButton" to="." method="_on_RestartButton_pressed"]
+[connection signal="pressed" from="LoseDialog/HBoxContainer/VBoxContainer/MenuButton" to="." method="_on_MenuButton_pressed"]
