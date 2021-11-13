@@ -16,6 +16,8 @@ func _on_SettingsButtons_pressed():
 
 
 func _on_LevelSelectButton_pressed():
+	Global.load_from_file()
+	$LevelSelect/VBoxContainer2/HBoxContainer/GridContainer.refresh_buttons()
 	$LevelSelect.popup_centered()
 
 
