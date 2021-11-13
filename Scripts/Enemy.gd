@@ -3,6 +3,8 @@ extends KinematicBody2D
 export var health := 1
 export var speed := 50.0
 
+export var gravity := 1700
+
 var velocity := Vector2.ZERO
 var snapping := Vector2.DOWN * 15
 var direction := -1
@@ -37,7 +39,7 @@ func _physics_process(delta):
 	velocity.x = direction * speed
 
 	velocity.y *= 0.96
-	velocity.y += 1700 * delta
+	velocity.y += gravity * delta
 
 	velocity = move_and_slide_with_snap(velocity, snapping, Vector2.UP, true)
 
