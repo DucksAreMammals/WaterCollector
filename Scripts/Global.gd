@@ -18,6 +18,10 @@ var show_fps
 func _ready():
 	load_from_file()
 
+func _process(_delta):
+	if Input.is_action_just_pressed("fullscreen"):
+		OS.window_fullscreen = !OS.window_fullscreen
+
 
 func save_to_file():
 	$"/root/SoundHandler".update_music_volume()
