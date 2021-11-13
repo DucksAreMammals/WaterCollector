@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=1]
 [ext_resource path="res://Scripts/LevelSelect.gd" type="Script" id=2]
 [ext_resource path="res://Fonts/PixelOperator.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Sprites/UI/Background.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -32,6 +33,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="VBoxContainer"]
 margin_right = 1040.0
 margin_bottom = 56.0
+custom_colors/font_color = Color( 0, 0.109804, 1, 1 )
 text = "Hydrohomie Adventure"
 align = 1
 
@@ -446,6 +448,12 @@ margin_right = 992.0
 margin_bottom = 537.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 493.709, 270.674 )
+scale = Vector2( 0.5, 0.5 )
+z_index = -5
+texture = ExtResource( 4 )
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/LevelSelectButton" to="." method="_on_LevelSelectButton_pressed"]
