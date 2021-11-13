@@ -28,6 +28,10 @@ export var health := 3
 
 export var jump_continue_limit := 0.25
 
+export var coyote_time = 75000
+
+var can_jump_until = -1
+
 var jump_continue := 0.0
 
 var water_count := 0
@@ -139,6 +143,7 @@ func _move(delta):
 
 	# Handle left and right inputs
 	if is_on_floor():
+		can_jump_until = OS.get_ticks_usec() + coyote_time
 		velocity.x *= friction
 		velocity.x += (
 			(Input.get_action_strength("right") - Input.get_action_strength("left"))
@@ -154,10 +159,11 @@ func _move(delta):
 		)
 
 	# Handle jump
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and can_jump_until > OS.get_ticks_usec():
 		jump_continue += delta
 		velocity.y = -jump_speed
 		snapping = Vector2.ZERO
+		can_jump_until = -1
 	elif (
 		Input.is_action_pressed("jump")
 		and jump_continue > 0
