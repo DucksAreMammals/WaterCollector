@@ -1,13 +1,14 @@
 extends GridContainer
 
 func _ready():
-	refresh_buttons()
+	refresh_buttons(true)
 
-func refresh_buttons():
+func refresh_buttons(connect = false):
 	var children = get_children()
 
 	for i in children.size():
-		children[i].connect("pressed", self, "_on_level_button_click", [i + 1])
+		if connect:
+			children[i].connect("pressed", self, "_on_level_button_click", [i + 1])
 
 		if i < Global.level:
 			children[i].disabled = false
