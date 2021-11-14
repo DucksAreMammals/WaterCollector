@@ -258,6 +258,7 @@ func collect(type):
 
 
 func _collect_drop():
+	$"/root/SoundHandler".play_drop()
 	water_count += 1
 	_update_water_count()
 
