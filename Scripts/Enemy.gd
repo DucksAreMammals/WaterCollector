@@ -42,6 +42,8 @@ func _physics_process(delta):
 	
 	if flying:
 		velocity.x = direction * speed * delta
+		# I don't think I need this value
+# warning-ignore:return_value_discarded
 		move_and_collide(velocity)
 	else:
 		velocity.x = direction * speed
