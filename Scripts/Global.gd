@@ -24,7 +24,7 @@ func _process(_delta):
 
 
 func save_to_file():
-	$"/root/SoundHandler".update_music_volume()
+	$"/root/SoundHandler".update_volume()
 
 	var file = File.new()
 	file.open(save_file, File.WRITE)
@@ -60,4 +60,4 @@ func load_from_file():
 		_original_level = level
 		save_to_file()
 
-	$"/root/SoundHandler".update_music_volume()
+	$"/root/SoundHandler".update_volume()
