@@ -2,9 +2,9 @@ extends Control
 
 
 func _ready():
-	$"Settings/VBoxContainer2/HBoxContainer2/VBoxContainer/HBoxContainer/MusicSlider".value = Global.music_level
-	$"Settings/VBoxContainer2/HBoxContainer2/VBoxContainer/HBoxContainer3/SFXSlider".value = Global.sfx_level
-	$"Settings/VBoxContainer2/HBoxContainer2/VBoxContainer/HBoxContainer2/FPSBox".pressed = Global.show_fps
+	$"Settings/VBoxContainer2/HBoxContainer2/HBoxContainer/VBoxContainer2/MusicSlider".value = Global.music_level
+	$"Settings/VBoxContainer2/HBoxContainer2/HBoxContainer/VBoxContainer2/SFXSlider".value = Global.sfx_level
+	$"Settings/VBoxContainer2/HBoxContainer2/HBoxContainer/VBoxContainer2/FPSBox".pressed = Global.show_fps
 
 
 func _on_PlayButton_pressed():
