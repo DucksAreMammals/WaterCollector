@@ -6,7 +6,6 @@ func _ready():
 	$"Settings/VBoxContainer2/HBoxContainer2/HBoxContainer/VBoxContainer2/SFXSlider".value = Global.sfx_level
 	$"Settings/VBoxContainer2/HBoxContainer2/HBoxContainer/VBoxContainer2/FPSBox".pressed = Global.show_fps
 
-
 func _on_PlayButton_pressed():
 	$"/root/SoundHandler".play_click()
 # warning-ignore:return_value_discarded
