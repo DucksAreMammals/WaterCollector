@@ -314,6 +314,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Settings" type="PopupDialog" parent="."]
+visible = true
 margin_right = 992.0
 margin_bottom = 537.0
 __meta__ = {
@@ -373,18 +374,18 @@ size_flags_vertical = 1
 [node name="HBoxContainer2" type="HBoxContainer" parent="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer"]
 margin_top = 60.0
 margin_right = 468.0
-margin_bottom = 124.0
+margin_bottom = 132.0
 
 [node name="Label" type="Label" parent="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer/HBoxContainer2"]
-margin_top = 4.0
+margin_top = 8.0
 margin_right = 240.0
-margin_bottom = 60.0
+margin_bottom = 64.0
 text = "Show FPS:"
 
 [node name="FPSBox" type="CheckBox" parent="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer/HBoxContainer2"]
 margin_left = 244.0
-margin_right = 268.0
-margin_bottom = 64.0
+margin_right = 316.0
+margin_bottom = 72.0
 
 [node name="Separator4" type="Control" parent="Settings/VBoxContainer2/HBoxContainer2"]
 margin_left = 472.0
