@@ -314,6 +314,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Settings" type="PopupDialog" parent="."]
+visible = true
 margin_right = 992.0
 margin_bottom = 537.0
 __meta__ = {
@@ -336,7 +337,7 @@ align = 1
 [node name="Separator" type="Control" parent="Settings/VBoxContainer2"]
 margin_top = 60.0
 margin_right = 992.0
-margin_bottom = 137.0
+margin_bottom = 133.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
@@ -344,13 +345,13 @@ __meta__ = {
 }
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Settings/VBoxContainer2"]
-margin_top = 141.0
+margin_top = 137.0
 margin_right = 992.0
-margin_bottom = 315.0
+margin_bottom = 321.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Settings/VBoxContainer2/HBoxContainer2"]
 margin_right = 468.0
-margin_bottom = 174.0
+margin_bottom = 184.0
 size_flags_horizontal = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer"]
@@ -370,10 +371,28 @@ margin_bottom = 56.0
 size_flags_horizontal = 3
 size_flags_vertical = 1
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer"]
+[node name="HBoxContainer3" type="HBoxContainer" parent="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer"]
 margin_top = 60.0
 margin_right = 468.0
-margin_bottom = 124.0
+margin_bottom = 116.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer/HBoxContainer3"]
+margin_right = 104.0
+margin_bottom = 56.0
+text = "SFX:"
+
+[node name="SFXSlider" type="HSlider" parent="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer/HBoxContainer3"]
+margin_left = 108.0
+margin_right = 468.0
+margin_bottom = 56.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer"]
+margin_top = 120.0
+margin_right = 468.0
+margin_bottom = 184.0
 
 [node name="Label" type="Label" parent="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer/HBoxContainer2"]
 margin_top = 4.0
@@ -389,7 +408,7 @@ margin_bottom = 64.0
 [node name="Separator4" type="Control" parent="Settings/VBoxContainer2/HBoxContainer2"]
 margin_left = 472.0
 margin_right = 519.0
-margin_bottom = 174.0
+margin_bottom = 184.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.1
@@ -400,28 +419,29 @@ __meta__ = {
 [node name="HBoxContainer4" type="HBoxContainer" parent="Settings/VBoxContainer2/HBoxContainer2"]
 margin_left = 523.0
 margin_right = 992.0
-margin_bottom = 174.0
+margin_bottom = 184.0
 size_flags_horizontal = 3
 
 [node name="Label" type="Label" parent="Settings/VBoxContainer2/HBoxContainer2/HBoxContainer4"]
+margin_top = 5.0
 margin_right = 469.0
-margin_bottom = 174.0
+margin_bottom = 179.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 1 )
 text = "Again, Once Again by fluffy (c) copyright 2016 Licensed under a Creative Commons Attribution (3.0) license. http://dig.ccmixter.org/files/fluffy/53739 "
 autowrap = true
 
 [node name="Separator3" type="Control" parent="Settings/VBoxContainer2"]
-margin_top = 319.0
+margin_top = 325.0
 margin_right = 992.0
-margin_bottom = 396.0
+margin_bottom = 399.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Settings/VBoxContainer2"]
-margin_top = 400.0
+margin_top = 403.0
 margin_right = 992.0
-margin_bottom = 456.0
+margin_bottom = 459.0
 
 [node name="Separator" type="Control" parent="Settings/VBoxContainer2/HBoxContainer"]
 margin_right = 420.0
@@ -443,7 +463,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Separator2" type="Control" parent="Settings/VBoxContainer2"]
-margin_top = 460.0
+margin_top = 463.0
 margin_right = 992.0
 margin_bottom = 537.0
 size_flags_horizontal = 3
@@ -461,5 +481,6 @@ texture = ExtResource( 4 )
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
 [connection signal="pressed" from="LevelSelect/VBoxContainer2/HBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]
 [connection signal="value_changed" from="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer/HBoxContainer/MusicSlider" to="." method="_on_MusicSlider_value_changed"]
+[connection signal="value_changed" from="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer/HBoxContainer3/SFXSlider" to="." method="_on_SFXSlider_value_changed"]
 [connection signal="toggled" from="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer/HBoxContainer2/FPSBox" to="." method="_on_FPSBox_toggled"]
 [connection signal="pressed" from="Settings/VBoxContainer2/HBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]
