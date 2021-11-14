@@ -384,19 +384,19 @@ size_flags_horizontal = 3
 
 [node name="MusicSlider" type="HSlider" parent="Settings/VBoxContainer2/HBoxContainer2/HBoxContainer/VBoxContainer2"]
 margin_right = 224.0
-margin_bottom = 52.0
+margin_bottom = 48.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="SFXSlider" type="HSlider" parent="Settings/VBoxContainer2/HBoxContainer2/HBoxContainer/VBoxContainer2"]
-margin_top = 56.0
+margin_top = 52.0
 margin_right = 224.0
-margin_bottom = 108.0
+margin_bottom = 100.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="FPSBox" type="CheckBox" parent="Settings/VBoxContainer2/HBoxContainer2/HBoxContainer/VBoxContainer2"]
-margin_top = 112.0
+margin_top = 104.0
 margin_right = 224.0
 margin_bottom = 176.0
 size_flags_vertical = 3

@@ -1,2 +1,2 @@
-# platformer
-A platformer that I haven't decided what I'm going to do with yet
+# HydroHomie Adventure
+This is a simple platformer game that I made in godot.
