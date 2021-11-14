@@ -1,6 +1,7 @@
 extends Node2D
 
-export (AudioStream) var DropSound
+export (AudioStream) var drop_sound
+export (AudioStream) var click_sound
 
 func update_volume():
 	if Global.music_level > 0:
@@ -17,6 +18,9 @@ func map_range(value: float, in_a: float, in_b: float, out_a: float, out_b: floa
 
 
 func play_drop():
-	$DropPlayer.stream = DropSound
+	$DropPlayer.stream = drop_sound
 	$DropPlayer.play()
-	
+
+func play_click():
+	$ClickPlayer.stream = click_sound
+	$ClickPlayer.play()

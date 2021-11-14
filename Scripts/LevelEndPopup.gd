@@ -29,6 +29,7 @@ func on_loose():
 
 
 func _on_NextLevelButton_pressed():
+	$"/root/SoundHandler".play_click()
 	can_hide = true
 	just_hidden = true
 	$WinDialog.hide()
@@ -51,6 +52,7 @@ func _on_LoseDialog_popup_hide():
 
 
 func _on_RestartButton_pressed():
+	$"/root/SoundHandler".play_click()
 	can_hide = true
 	just_hidden = true
 	$WinDialog.hide()
@@ -60,6 +62,7 @@ func _on_RestartButton_pressed():
 
 
 func _on_MenuButton_pressed():
+	$"/root/SoundHandler".play_click()
 	can_hide = true
 	just_hidden = true
 	$WinDialog.hide()

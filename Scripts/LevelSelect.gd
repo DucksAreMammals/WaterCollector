@@ -16,5 +16,6 @@ func refresh_buttons(connect = false):
 			children[i].disabled = true
 
 func _on_level_button_click(level_to_load: int):
+	$"/root/SoundHandler".play_click()
 # warning-ignore:return_value_discarded
 	get_tree().change_scene("res://Scenes/Levels/" + str(level_to_load) + ".tscn")
