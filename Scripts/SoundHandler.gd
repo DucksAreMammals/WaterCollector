@@ -28,10 +28,12 @@ func play_drop():
 	if sfx_level > sfx_min:
 		$DropPlayer.volume_db = sfx_level
 		$DropPlayer.stream = drop_sound
+		$DropPlayer.pitch_scale = rand_range(0.9, 1.1)
 		$DropPlayer.play()
 
 func play_click():
 	if sfx_level > sfx_min:
 		$ClickPlayer.volume_db = sfx_level
 		$ClickPlayer.stream = click_sound
+		$ClickPlayer.pitch_scale = rand_range(0.9, 1.1)
 		$ClickPlayer.play()
