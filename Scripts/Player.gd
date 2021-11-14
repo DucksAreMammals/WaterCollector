@@ -56,6 +56,8 @@ export var time_between_shots := 250000
 
 onready var pause = preload("res://Scenes/Pause.tscn")
 
+var dead = false
+
 
 func _ready():
 	add_to_group("player")
@@ -227,7 +229,7 @@ func _hit(direction):
 		invincible_until = OS.get_ticks_usec() + invincibility_duration * 1000000
 
 		health -= 1
-		if health <= 0:
+		if health == 0:
 			_die()
 
 		bounce.y = -y_hurt_bounce_speed
@@ -244,12 +246,14 @@ func _update_health():
 
 
 func _die():
-	emit_signal("die")
+	if not dead:
+		emit_signal("die")
 
-	water_count = 0
-	Global.water_count = 0
-	Global.save_to_file()
+		water_count = 0
+		Global.water_count = 0
+		Global.save_to_file()
 
+		dead = true
 
 func collect(type):
 	match type:
