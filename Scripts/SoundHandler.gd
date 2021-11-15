@@ -5,6 +5,11 @@ export (AudioStream) var click_sound
 export (AudioStream) var shoot_sound
 export (AudioStream) var enemy_hit_sound
 export (AudioStream) var player_hit_sound
+export (AudioStream) var walk_sound
+
+export var walk_rate := 400000
+
+var prev_walk := -1.0
 
 var music_min := -40.0
 
@@ -29,6 +34,7 @@ func map_range(value: float, in_a: float, in_b: float, out_a: float, out_b: floa
 
 func _play(player, sound, pitch_scale = true):
 	if sfx_level > sfx_min:
+		player.stop()
 		player.volume_db = sfx_level
 		player.stream = sound
 		
@@ -51,3 +57,8 @@ func play_enemy_hit():
 
 func play_player_hit():
 	_play($PlayerHitPlayer, player_hit_sound)
+
+func play_walk():
+	if prev_walk + walk_rate < OS.get_ticks_usec():
+		prev_walk = OS.get_ticks_usec()
+		_play($GroundPlayer, walk_sound)

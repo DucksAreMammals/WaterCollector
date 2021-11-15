@@ -148,11 +148,15 @@ func _move(delta):
 	if is_on_floor():
 		can_jump_until = OS.get_ticks_usec() + coyote_time
 		velocity.x *= friction
-		velocity.x += (
-			(Input.get_action_strength("right") - Input.get_action_strength("left"))
-			* move_speed
-			* delta
-		)
+		
+		var input_speed = ((Input.get_action_strength("right") - Input.get_action_strength("left"))
+			* move_speed * delta)
+		
+		velocity.x += input_speed
+		
+		if input_speed > 0:
+			SoundHandler.play_walk()
+	
 	else:
 		velocity.x *= air_resistance
 		velocity.x += (
