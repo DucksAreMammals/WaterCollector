@@ -163,7 +163,7 @@ margin_bottom = 200.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="GridContainer" type="GridContainer" parent="LevelSelect/VBoxContainer2/HBoxContainer"]
+[node name="LevelContainer" type="GridContainer" parent="LevelSelect/VBoxContainer2/HBoxContainer"]
 margin_left = 326.0
 margin_right = 902.0
 margin_bottom = 200.0
@@ -172,14 +172,14 @@ size_flags_vertical = 3
 columns = 5
 script = ExtResource( 2 )
 
-[node name="Button" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/GridContainer"]
+[node name="Button" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/LevelContainer"]
 margin_right = 112.0
 margin_bottom = 64.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "1-1"
 
-[node name="Button2" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/GridContainer"]
+[node name="Button2" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/LevelContainer"]
 margin_left = 116.0
 margin_right = 228.0
 margin_bottom = 64.0
@@ -187,7 +187,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "1-2"
 
-[node name="Button3" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/GridContainer"]
+[node name="Button3" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/LevelContainer"]
 margin_left = 232.0
 margin_right = 344.0
 margin_bottom = 64.0
@@ -195,7 +195,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "1-3"
 
-[node name="Button4" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/GridContainer"]
+[node name="Button4" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/LevelContainer"]
 margin_left = 348.0
 margin_right = 460.0
 margin_bottom = 64.0
@@ -203,7 +203,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "1-4"
 
-[node name="Button5" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/GridContainer"]
+[node name="Button5" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/LevelContainer"]
 margin_left = 464.0
 margin_right = 576.0
 margin_bottom = 64.0
@@ -211,7 +211,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "1-5"
 
-[node name="Button6" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/GridContainer"]
+[node name="Button6" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/LevelContainer"]
 margin_top = 68.0
 margin_right = 112.0
 margin_bottom = 132.0
@@ -219,7 +219,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "2-1"
 
-[node name="Button7" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/GridContainer"]
+[node name="Button7" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/LevelContainer"]
 margin_left = 116.0
 margin_top = 68.0
 margin_right = 228.0
@@ -228,7 +228,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "2-2"
 
-[node name="Button8" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/GridContainer"]
+[node name="Button8" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/LevelContainer"]
 margin_left = 232.0
 margin_top = 68.0
 margin_right = 344.0
@@ -237,7 +237,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "2-3"
 
-[node name="Button9" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/GridContainer"]
+[node name="Button9" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/LevelContainer"]
 margin_left = 348.0
 margin_top = 68.0
 margin_right = 460.0
@@ -246,7 +246,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "2-4"
 
-[node name="Button10" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/GridContainer"]
+[node name="Button10" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/LevelContainer"]
 margin_left = 464.0
 margin_top = 68.0
 margin_right = 576.0
@@ -255,7 +255,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "2-5"
 
-[node name="Button11" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/GridContainer"]
+[node name="Button11" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/LevelContainer"]
 margin_top = 136.0
 margin_right = 112.0
 margin_bottom = 200.0
@@ -263,7 +263,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "3-1"
 
-[node name="Button12" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/GridContainer"]
+[node name="Button12" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/LevelContainer"]
 margin_left = 116.0
 margin_top = 136.0
 margin_right = 228.0
@@ -272,7 +272,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "3-2"
 
-[node name="Button13" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/GridContainer"]
+[node name="Button13" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/LevelContainer"]
 margin_left = 232.0
 margin_top = 136.0
 margin_right = 344.0
@@ -281,7 +281,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "3-3"
 
-[node name="Button14" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/GridContainer"]
+[node name="Button14" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/LevelContainer"]
 margin_left = 348.0
 margin_top = 136.0
 margin_right = 460.0
@@ -290,7 +290,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "3-4"
 
-[node name="Button15" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/GridContainer"]
+[node name="Button15" type="Button" parent="LevelSelect/VBoxContainer2/HBoxContainer/LevelContainer"]
 margin_left = 464.0
 margin_top = 136.0
 margin_right = 576.0
@@ -337,7 +337,7 @@ align = 1
 [node name="Separator" type="Control" parent="Settings/VBoxContainer2"]
 margin_top = 60.0
 margin_right = 992.0
-margin_bottom = 136.0
+margin_bottom = 116.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
@@ -345,66 +345,82 @@ __meta__ = {
 }
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Settings/VBoxContainer2"]
-margin_top = 140.0
+margin_top = 120.0
 margin_right = 992.0
-margin_bottom = 316.0
+margin_bottom = 356.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Settings/VBoxContainer2/HBoxContainer2"]
-margin_right = 468.0
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings/VBoxContainer2/HBoxContainer2"]
+margin_right = 404.0
+margin_bottom = 236.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer"]
+margin_right = 404.0
 margin_bottom = 176.0
 size_flags_horizontal = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Settings/VBoxContainer2/HBoxContainer2/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer/HBoxContainer"]
 margin_right = 240.0
 margin_bottom = 176.0
 size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="Settings/VBoxContainer2/HBoxContainer2/HBoxContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer"]
 margin_right = 240.0
 margin_bottom = 56.0
 text = "Music:"
 
-[node name="Label2" type="Label" parent="Settings/VBoxContainer2/HBoxContainer2/HBoxContainer/VBoxContainer"]
+[node name="Label2" type="Label" parent="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer"]
 margin_top = 60.0
 margin_right = 240.0
 margin_bottom = 116.0
 text = "SFX:"
 
-[node name="Label3" type="Label" parent="Settings/VBoxContainer2/HBoxContainer2/HBoxContainer/VBoxContainer"]
+[node name="Label3" type="Label" parent="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer"]
 margin_top = 120.0
 margin_right = 240.0
 margin_bottom = 176.0
 text = "Show FPS:"
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="Settings/VBoxContainer2/HBoxContainer2/HBoxContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer/HBoxContainer"]
 margin_left = 244.0
-margin_right = 468.0
+margin_right = 404.0
 margin_bottom = 176.0
 size_flags_horizontal = 3
 
-[node name="MusicSlider" type="HSlider" parent="Settings/VBoxContainer2/HBoxContainer2/HBoxContainer/VBoxContainer2"]
-margin_right = 224.0
+[node name="MusicSlider" type="HSlider" parent="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer2"]
+margin_right = 160.0
 margin_bottom = 48.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="SFXSlider" type="HSlider" parent="Settings/VBoxContainer2/HBoxContainer2/HBoxContainer/VBoxContainer2"]
+[node name="SFXSlider" type="HSlider" parent="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer2"]
 margin_top = 52.0
-margin_right = 224.0
+margin_right = 160.0
 margin_bottom = 100.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="FPSBox" type="CheckBox" parent="Settings/VBoxContainer2/HBoxContainer2/HBoxContainer/VBoxContainer2"]
+[node name="FPSBox" type="CheckBox" parent="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer2"]
 margin_top = 104.0
-margin_right = 224.0
+margin_right = 160.0
 margin_bottom = 176.0
 size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ClearProgressButton" type="Button" parent="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer"]
+margin_top = 180.0
+margin_right = 404.0
+margin_bottom = 236.0
+text = "Clear Progress"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Separator4" type="Control" parent="Settings/VBoxContainer2/HBoxContainer2"]
-margin_left = 472.0
-margin_right = 519.0
-margin_bottom = 176.0
+margin_left = 408.0
+margin_right = 460.0
+margin_bottom = 236.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.1
@@ -413,31 +429,31 @@ __meta__ = {
 }
 
 [node name="HBoxContainer4" type="HBoxContainer" parent="Settings/VBoxContainer2/HBoxContainer2"]
-margin_left = 523.0
+margin_left = 464.0
 margin_right = 992.0
-margin_bottom = 176.0
+margin_bottom = 236.0
 size_flags_horizontal = 3
 
 [node name="Label" type="Label" parent="Settings/VBoxContainer2/HBoxContainer2/HBoxContainer4"]
-margin_top = 1.0
-margin_right = 469.0
-margin_bottom = 175.0
+margin_top = 45.0
+margin_right = 528.0
+margin_bottom = 190.0
 size_flags_horizontal = 3
 custom_fonts/font = SubResource( 1 )
 text = "Again, Once Again by fluffy (c) copyright 2016 Licensed under a Creative Commons Attribution (3.0) license. http://dig.ccmixter.org/files/fluffy/53739 "
 autowrap = true
 
 [node name="Separator3" type="Control" parent="Settings/VBoxContainer2"]
-margin_top = 320.0
+margin_top = 360.0
 margin_right = 992.0
-margin_bottom = 396.0
+margin_bottom = 416.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Settings/VBoxContainer2"]
-margin_top = 400.0
+margin_top = 420.0
 margin_right = 992.0
-margin_bottom = 456.0
+margin_bottom = 476.0
 
 [node name="Separator" type="Control" parent="Settings/VBoxContainer2/HBoxContainer"]
 margin_right = 420.0
@@ -459,7 +475,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Separator2" type="Control" parent="Settings/VBoxContainer2"]
-margin_top = 460.0
+margin_top = 480.0
 margin_right = 992.0
 margin_bottom = 537.0
 size_flags_horizontal = 3
@@ -476,7 +492,8 @@ texture = ExtResource( 4 )
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/SettingsButtons" to="." method="_on_SettingsButtons_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
 [connection signal="pressed" from="LevelSelect/VBoxContainer2/HBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]
-[connection signal="value_changed" from="Settings/VBoxContainer2/HBoxContainer2/HBoxContainer/VBoxContainer2/MusicSlider" to="." method="_on_MusicSlider_value_changed"]
-[connection signal="value_changed" from="Settings/VBoxContainer2/HBoxContainer2/HBoxContainer/VBoxContainer2/SFXSlider" to="." method="_on_SFXSlider_value_changed"]
-[connection signal="toggled" from="Settings/VBoxContainer2/HBoxContainer2/HBoxContainer/VBoxContainer2/FPSBox" to="." method="_on_FPSBox_toggled"]
+[connection signal="value_changed" from="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer2/MusicSlider" to="." method="_on_MusicSlider_value_changed"]
+[connection signal="value_changed" from="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer2/SFXSlider" to="." method="_on_SFXSlider_value_changed"]
+[connection signal="toggled" from="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer2/FPSBox" to="." method="_on_FPSBox_toggled"]
+[connection signal="pressed" from="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer/ClearProgressButton" to="." method="_on_ClearProgressButton_pressed"]
 [connection signal="pressed" from="Settings/VBoxContainer2/HBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]
