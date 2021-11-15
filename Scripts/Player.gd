@@ -227,6 +227,8 @@ func hit(direction):
 
 func _hit(direction):
 	if invincible_until < OS.get_ticks_usec():
+		SoundHandler.play_player_hit()
+	
 		invincible_until = OS.get_ticks_usec() + invincibility_duration * 1000000
 
 		health -= 1

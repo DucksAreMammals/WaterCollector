@@ -62,6 +62,7 @@ func _change_animation():
 
 
 func hit(_direction):
+	SoundHandler.play_enemy_hit()
 	health -= 1
 	if health <= 0:
 		_die()

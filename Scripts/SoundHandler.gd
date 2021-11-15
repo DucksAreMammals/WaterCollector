@@ -3,6 +3,8 @@ extends Node2D
 export (AudioStream) var drop_sound
 export (AudioStream) var click_sound
 export (AudioStream) var shoot_sound
+export (AudioStream) var enemy_hit_sound
+export (AudioStream) var player_hit_sound
 
 var music_min := -40.0
 
@@ -25,23 +27,27 @@ func map_range(value: float, in_a: float, in_b: float, out_a: float, out_b: floa
 	return (value - in_a) / (in_b - in_a) * (out_b - out_a) + out_a
 
 
-func play_drop():
+func _play(player, sound, pitch_scale = true):
 	if sfx_level > sfx_min:
-		$DropPlayer.volume_db = sfx_level
-		$DropPlayer.stream = drop_sound
-		$DropPlayer.pitch_scale = rand_range(0.9, 1.1)
-		$DropPlayer.play()
+		player.volume_db = sfx_level
+		player.stream = sound
+		
+		if pitch_scale:
+			player.pitch_scale = rand_range(0.9, 1.1)
+		
+		player.play()
+
+func play_drop():
+	_play($DropPlayer, drop_sound)
 
 func play_click():
-	if sfx_level > sfx_min:
-		$ClickPlayer.volume_db = sfx_level
-		$ClickPlayer.stream = click_sound
-		$ClickPlayer.pitch_scale = rand_range(0.9, 1.1)
-		$ClickPlayer.play()
+	_play($ClickPlayer, click_sound)
 
 func play_shoot():
-	if sfx_level > sfx_min:
-		$ShootPlayer.volume_db = sfx_level
-		$ShootPlayer.stream = shoot_sound
-		$ShootPlayer.pitch_scale = rand_range(0.9, 1.1)
-		$ShootPlayer.play()
+	_play($ShootPlayer, shoot_sound)
+
+func play_enemy_hit():
+	_play($EnemyHitPlayer, enemy_hit_sound)
+
+func play_player_hit():
+	_play($PlayerHitPlayer, player_hit_sound)
