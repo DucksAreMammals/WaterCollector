@@ -201,20 +201,22 @@ func _collide():
 
 		# Handle enemy collisions
 		if collision.collider.is_in_group("enemy"):
-			if collision.normal.y < 0:
-				# Bounce off of enemy
-				collision.collider.hit(0)
-
-				if Input.is_action_pressed("jump"):
-					bounce.y = -jump_speed
-				else:
-					bounce.y = -y_hurt_bounce_speed
-
-				bounce.x = x_attack_bounce_speed
-
-				$Camera.shake()
-			else:
-				_hit(collision.normal.x)
+#			if collision.normal.y < 0:
+#				# Bounce off of enemy
+#				collision.collider.hit(0)
+#
+#				if Input.is_action_pressed("jump"):
+#					bounce.y = -jump_speed
+#				else:
+#					bounce.y = -y_hurt_bounce_speed
+#
+#				bounce.x = x_attack_bounce_speed
+#
+#				$Camera.shake()
+#			else:
+				var direction = -1 if collision.normal.x < 0 else 1
+				_hit(direction)
+				
 
 		# Handle falling into coke
 		if collision.collider.is_in_group("coke"):
