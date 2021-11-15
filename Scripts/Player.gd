@@ -75,6 +75,7 @@ func _process(_delta: float) -> void:
 		and next_shoot_time < OS.get_ticks_usec()
 		and water_count > 0
 	):
+		SoundHandler.play_shoot()
 		water_count -= 1
 		_update_water_count()
 

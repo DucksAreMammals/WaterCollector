@@ -2,6 +2,7 @@ extends Node2D
 
 export (AudioStream) var drop_sound
 export (AudioStream) var click_sound
+export (AudioStream) var shoot_sound
 
 var music_min := -40.0
 
@@ -37,3 +38,10 @@ func play_click():
 		$ClickPlayer.stream = click_sound
 		$ClickPlayer.pitch_scale = rand_range(0.9, 1.1)
 		$ClickPlayer.play()
+
+func play_shoot():
+	if sfx_level > sfx_min:
+		$ShootPlayer.volume_db = sfx_level
+		$ShootPlayer.stream = shoot_sound
+		$ShootPlayer.pitch_scale = rand_range(0.9, 1.1)
+		$ShootPlayer.play()
