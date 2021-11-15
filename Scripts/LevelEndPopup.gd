@@ -4,9 +4,9 @@ var can_hide := false
 
 func _process(_delta):
 	if $LoseDialog.visible and Input.is_action_pressed("continue"):
-		_on_RestartButton_pressed()
+		_restart()
 	elif $WinDialog.visible and Input.is_action_pressed("continue"):
-		_on_NextLevelButton_pressed()
+		_next_level()
 
 func on_win():
 	$WinDialog.popup_centered()
@@ -17,6 +17,21 @@ func on_loose():
 	$LoseDialog.popup_centered()
 	get_tree().paused = true
 
+
+func _next_level():
+	can_hide = true
+	$WinDialog.hide()
+	$LoseDialog.hide()
+# warning-ignore:return_value_discarded
+	get_tree().change_scene("res://Scenes/Levels/" + str(Global.level) + ".tscn")
+	
+
+func _restart():
+	can_hide = true
+	$WinDialog.hide()
+	$LoseDialog.hide()
+# warning-ignore:return_value_discarded
+	get_tree().reload_current_scene()
 
 func _on_WinDialog_popup_hide():
 	if can_hide:
@@ -33,19 +48,11 @@ func _on_LoseDialog_popup_hide():
 
 func _on_NextLevelButton_pressed():
 	$"/root/SoundHandler".play_click()
-	can_hide = true
-	$WinDialog.hide()
-	$LoseDialog.hide()
-# warning-ignore:return_value_discarded
-	get_tree().change_scene("res://Scenes/Levels/" + str(Global.level) + ".tscn")
+	_next_level()
 
 func _on_RestartButton_pressed():
 	$"/root/SoundHandler".play_click()
-	can_hide = true
-	$WinDialog.hide()
-	$LoseDialog.hide()
-# warning-ignore:return_value_discarded
-	get_tree().reload_current_scene()
+	_restart()
 
 
 func _on_MenuButton_pressed():

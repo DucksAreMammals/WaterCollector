@@ -4,16 +4,21 @@ extends CanvasLayer
 func _process(_delta):
 	if Input.is_action_just_pressed("continue"):
 		if $PopupDialog.visible:
-			_on_ResumeButton_pressed()
+			_resume()
 		else:
-			_on_PauseButton_pressed()
+			_pause()
 
+func _resume():
 
-func _on_PauseButton_pressed():
-	$"/root/SoundHandler".play_click()
+	$PopupDialog.visible = false
+
+func _pause():
 	get_tree().paused = true
 	$PopupDialog.popup_centered()
 
+func _on_PauseButton_pressed():
+	$"/root/SoundHandler".play_click()
+	_pause()
 
 func _on_PopupDialog_popup_hide():
 	get_tree().paused = false
@@ -27,7 +32,7 @@ func _on_MenuButton_pressed():
 
 func _on_ResumeButton_pressed():
 	$"/root/SoundHandler".play_click()
-	$PopupDialog.visible = false
+	_resume()
 
 
 func _on_RestartButton_pressed():
