@@ -27,6 +27,7 @@ extents = Vector2( 64, 447.625 )
 
 [node name="Level" type="Node2D"]
 script = ExtResource( 5 )
+next_level = 8
 level_name = "2-2"
 
 [node name="Level" type="Node2D" parent="."]
@@ -163,13 +164,11 @@ shape = SubResource( 1 )
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Level/Enemies/EnemyBoxes"]
 position = Vector2( 3824, -48.0001 )
 rotation = -0.0182275
-scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Level/Enemies/EnemyBoxes"]
 position = Vector2( 4304, -48 )
 rotation = -0.0182275
-scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Level/Enemies/EnemyBoxes"]
