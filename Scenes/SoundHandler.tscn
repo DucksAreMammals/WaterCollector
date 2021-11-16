@@ -38,3 +38,5 @@ stream = ExtResource( 4 )
 [node name="PlayerHitPlayer" type="AudioStreamPlayer" parent="."]
 
 [node name="GroundPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="EndPlayer" type="AudioStreamPlayer" parent="."]

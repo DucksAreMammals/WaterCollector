@@ -5,6 +5,8 @@ export var level_name := "1-1"
 
 
 func _on_WaterFaucet_finish():
+	SoundHandler.play_win()
+	
 	Global.level = next_level
 	Global.save_to_file()
 

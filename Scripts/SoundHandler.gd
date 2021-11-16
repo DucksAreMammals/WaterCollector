@@ -6,6 +6,11 @@ export (AudioStream) var shoot_sound
 export (AudioStream) var enemy_hit_sound
 export (AudioStream) var player_hit_sound
 export (AudioStream) var walk_sound
+export (AudioStream) var jump_sound
+export (AudioStream) var land_sound
+export (AudioStream) var win_sound
+export (AudioStream) var lose_sound
+export (AudioStream) var coke_sound
 
 export var walk_rate := 400000
 
@@ -57,6 +62,21 @@ func play_enemy_hit():
 
 func play_player_hit():
 	_play($PlayerHitPlayer, player_hit_sound)
+
+func play_jump():
+	_play($GroundPlayer, jump_sound)
+
+func play_land():
+	_play($GroundPlayer, land_sound)
+
+func play_win():
+	_play($EndPlayer, win_sound, false)
+
+func play_lose():
+	_play($EndPlayer, lose_sound, false)
+
+func play_coke_lose():
+	_play($EndPlayer, coke_sound, false)
 
 func play_walk():
 	if prev_walk + walk_rate < OS.get_ticks_usec():

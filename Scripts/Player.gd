@@ -58,6 +58,7 @@ onready var pause = preload("res://Scenes/Pause.tscn")
 
 var dead = false
 
+var on_floor_last_frame = true
 
 func _ready():
 	add_to_group("player")
@@ -120,6 +121,11 @@ func change_animation():
 
 
 func _move(delta):
+	if not on_floor_last_frame and is_on_floor():
+		SoundHandler.play_land()
+	
+	on_floor_last_frame = is_on_floor()
+	
 	# Handle passthrough collisions
 	if (
 		not Input.is_action_pressed("down")
@@ -167,6 +173,7 @@ func _move(delta):
 
 	# Handle jump
 	if Input.is_action_just_pressed("jump") and can_jump_until > OS.get_ticks_usec():
+		SoundHandler.play_jump()
 		jump_continue += delta
 		velocity.y = -jump_speed
 		snapping = Vector2.ZERO
@@ -224,7 +231,7 @@ func _collide():
 
 		# Handle falling into coke
 		if collision.collider.is_in_group("coke"):
-			_die()
+			_die(1)
 
 
 func hit(direction):
@@ -254,8 +261,14 @@ func _update_health():
 	$UI/Heart1.texture = full_heart if health >= 1 else empty_heart
 
 
-func _die():
+func _die(cause = 0):
 	if not dead:
+		match cause:
+			0:
+				SoundHandler.play_lose()
+			1:
+				SoundHandler.play_coke_lose()
+		
 		emit_signal("die")
 
 		water_count = 0
@@ -271,7 +284,7 @@ func collect(type):
 
 
 func _collect_drop():
-	$"/root/SoundHandler".play_drop()
+	SoundHandler.play_drop()
 	water_count += 1
 	_update_water_count()
 
