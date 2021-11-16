@@ -121,7 +121,7 @@ func change_animation():
 
 
 func _move(delta):
-	if not on_floor_last_frame and is_on_floor():
+	if (not on_floor_last_frame) and is_on_floor():
 		SoundHandler.play_land()
 	
 	on_floor_last_frame = is_on_floor()

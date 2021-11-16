@@ -64,10 +64,10 @@ func play_player_hit():
 	_play($PlayerHitPlayer, player_hit_sound)
 
 func play_jump():
-	_play($GroundPlayer, jump_sound)
+	_play($LeaveGroundPlayer, jump_sound)
 
 func play_land():
-	_play($GroundPlayer, land_sound)
+	_play($LeaveGroundPlayer, land_sound)
 
 func play_win():
 	_play($EndPlayer, win_sound, false)
@@ -81,4 +81,4 @@ func play_coke_lose():
 func play_walk():
 	if prev_walk + walk_rate < OS.get_ticks_usec():
 		prev_walk = OS.get_ticks_usec()
-		_play($GroundPlayer, walk_sound)
+		_play($GroundPlayer, walk_sound, true)
