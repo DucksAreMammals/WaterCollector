@@ -57,6 +57,10 @@ shape = SubResource( 1 )
 position = Vector2( 3888, 736 )
 shape = SubResource( 1 )
 
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Level/Map/DeathPlane"]
+position = Vector2( 6304, -192 )
+shape = SubResource( 1 )
+
 [node name="WaterFaucet" parent="Level/Map" instance=ExtResource( 3 )]
 position = Vector2( 5280, -608 )
 
