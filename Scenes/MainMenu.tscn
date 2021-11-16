@@ -330,7 +330,7 @@ align = 1
 [node name="Separator" type="Control" parent="Settings/VBoxContainer2"]
 margin_top = 60.0
 margin_right = 992.0
-margin_bottom = 116.0
+margin_bottom = 96.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
@@ -338,13 +338,13 @@ __meta__ = {
 }
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Settings/VBoxContainer2"]
-margin_top = 120.0
+margin_top = 100.0
 margin_right = 992.0
-margin_bottom = 356.0
+margin_bottom = 396.0
 
 [node name="Separator4" type="Control" parent="Settings/VBoxContainer2/HBoxContainer2"]
 margin_right = 36.0
-margin_bottom = 236.0
+margin_bottom = 296.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.04
@@ -352,7 +352,7 @@ size_flags_stretch_ratio = 0.04
 [node name="VBoxContainer" type="VBoxContainer" parent="Settings/VBoxContainer2/HBoxContainer2"]
 margin_left = 40.0
 margin_right = 951.0
-margin_bottom = 236.0
+margin_bottom = 296.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -422,25 +422,35 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="UnlockEverythingButton" type="Button" parent="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer"]
+margin_top = 240.0
+margin_right = 476.0
+margin_bottom = 296.0
+size_flags_horizontal = 0
+text = "Unlock Everything"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Separator5" type="Control" parent="Settings/VBoxContainer2/HBoxContainer2"]
 margin_left = 955.0
 margin_right = 992.0
-margin_bottom = 236.0
+margin_bottom = 296.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.04
 
 [node name="Separator3" type="Control" parent="Settings/VBoxContainer2"]
-margin_top = 360.0
+margin_top = 400.0
 margin_right = 992.0
-margin_bottom = 416.0
+margin_bottom = 436.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Settings/VBoxContainer2"]
-margin_top = 420.0
+margin_top = 440.0
 margin_right = 992.0
-margin_bottom = 476.0
+margin_bottom = 496.0
 
 [node name="Separator" type="Control" parent="Settings/VBoxContainer2/HBoxContainer"]
 margin_right = 420.0
@@ -462,7 +472,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Separator2" type="Control" parent="Settings/VBoxContainer2"]
-margin_top = 480.0
+margin_top = 500.0
 margin_right = 992.0
 margin_bottom = 537.0
 size_flags_horizontal = 3
@@ -483,4 +493,5 @@ texture = ExtResource( 4 )
 [connection signal="value_changed" from="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer2/SFXSlider" to="." method="_on_SFXSlider_value_changed"]
 [connection signal="toggled" from="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer/HBoxContainer/VBoxContainer2/FPSBox" to="." method="_on_FPSBox_toggled"]
 [connection signal="pressed" from="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer/ClearProgressButton" to="." method="_on_ClearProgressButton_pressed"]
+[connection signal="pressed" from="Settings/VBoxContainer2/HBoxContainer2/VBoxContainer/UnlockEverythingButton" to="." method="_on_UnlockEverythingButton_pressed"]
 [connection signal="pressed" from="Settings/VBoxContainer2/HBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]
