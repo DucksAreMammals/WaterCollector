@@ -11,7 +11,9 @@ script = ExtResource( 5 )
 
 [node name="Level" type="Node2D" parent="."]
 
-[node name="TileMapPassthrough" type="TileMap" parent="Level"]
+[node name="Map" type="Node" parent="Level"]
+
+[node name="TileMapPassthrough" type="TileMap" parent="Level/Map"]
 scale = Vector2( 4, 4 )
 tile_set = ExtResource( 2 )
 cell_size = Vector2( 16, 16 )
@@ -19,29 +21,33 @@ collision_layer = 2
 collision_mask = 0
 format = 1
 
-[node name="TileMap" type="TileMap" parent="Level" groups=["enemybox"]]
+[node name="TileMap" type="TileMap" parent="Level/Map" groups=["enemybox"]]
 scale = Vector2( 4, 4 )
 tile_set = ExtResource( 2 )
 cell_size = Vector2( 16, 16 )
 collision_mask = 0
 format = 1
 
-[node name="TileMapHurt" type="TileMap" parent="Level" groups=["coke"]]
+[node name="TileMapHurt" type="TileMap" parent="Level/Map" groups=["coke"]]
 scale = Vector2( 4, 4 )
 tile_set = ExtResource( 4 )
 cell_size = Vector2( 16, 16 )
 format = 1
 
-[node name="DeathPlane" type="Area2D" parent="Level"]
+[node name="DeathPlane" type="Area2D" parent="Level/Map"]
 
-[node name="EnemyBoxes" type="Area2D" parent="Level" groups=["enemybox"]]
-
-[node name="WaterFaucet" parent="Level" instance=ExtResource( 3 )]
+[node name="WaterFaucet" parent="Level/Map" instance=ExtResource( 3 )]
 position = Vector2( 416, 480 )
+
+[node name="Drops" type="Node" parent="Level"]
+
+[node name="Enemies" type="Node" parent="Level"]
+
+[node name="EnemyBoxes" type="Area2D" parent="Level/Enemies" groups=["enemybox"]]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( -1, 480 )
 
-[connection signal="body_entered" from="Level/DeathPlane" to="Player" method="_on_DeathPlane_body_entered"]
-[connection signal="finish" from="Level/WaterFaucet" to="." method="_on_WaterFaucet_finish"]
+[connection signal="body_entered" from="Level/Map/DeathPlane" to="Player" method="_on_DeathPlane_body_entered"]
+[connection signal="finish" from="Level/Map/WaterFaucet" to="." method="_on_WaterFaucet_finish"]
 [connection signal="die" from="Player" to="." method="_on_Player_die"]
