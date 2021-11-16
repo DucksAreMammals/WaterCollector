@@ -137,6 +137,7 @@ fullscreen={
 
 2d_physics/layer_1="Normal"
 2d_physics/layer_2="Passthrough"
+2d_physics/layer_3="MovingPlatform"
 
 [physics]
 

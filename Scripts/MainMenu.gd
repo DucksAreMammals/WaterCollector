@@ -62,5 +62,5 @@ func _on_ClearProgressButton_pressed():
 
 
 func _on_UnlockEverythingButton_pressed():
-	Global.level = 6
+	Global.level = 7
 	Global.save_to_file()
