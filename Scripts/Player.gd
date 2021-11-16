@@ -60,6 +60,8 @@ var dead = false
 
 var on_floor_last_frame = true
 
+var has_landed = false
+
 func _ready():
 	add_to_group("player")
 
@@ -121,8 +123,10 @@ func change_animation():
 
 
 func _move(delta):
-	if (not on_floor_last_frame) and is_on_floor():
+	if not on_floor_last_frame and is_on_floor() and has_landed:
 		SoundHandler.play_land()
+	
+	has_landed = true if is_on_floor() or has_landed else false
 	
 	on_floor_last_frame = is_on_floor()
 	
