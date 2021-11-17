@@ -22,6 +22,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="VBoxContainer"]
 margin_right = 992.0
 margin_bottom = 56.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Thanks for playing!"
 align = 1
 
@@ -36,6 +37,7 @@ size_flags_vertical = 3
 margin_top = 240.0
 margin_right = 992.0
 margin_bottom = 296.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "You have finished the game. Thank you!"
 
 [node name="Control2" type="Control" parent="VBoxContainer"]

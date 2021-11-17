@@ -28,7 +28,7 @@ extents = Vector2( 64, 447.625 )
 [node name="Level" type="Node2D"]
 script = ExtResource( 5 )
 next_level = 8
-level_name = "2-2"
+level_name = "7"
 
 [node name="Level" type="Node2D" parent="."]
 
