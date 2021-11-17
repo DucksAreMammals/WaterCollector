@@ -20,6 +20,9 @@ var show_fps
 var good_ending = false
 
 func _ready():
+	if not OS.has_feature("web"):
+		OS.window_fullscreen = true
+	
 	load_from_file()
 
 func _process(_delta):
