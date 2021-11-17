@@ -5,6 +5,8 @@ func _ready():
 	find_node("MusicSlider").value = Global.music_level
 	find_node("SFXSlider").value = Global.sfx_level
 	find_node("FPSBox").pressed = Global.show_fps
+	
+	$VBoxContainer/HBoxContainer/VBoxContainer/PlayButton.grab_focus()
 
 func _on_PlayButton_pressed():
 	SoundHandler.play_click()
