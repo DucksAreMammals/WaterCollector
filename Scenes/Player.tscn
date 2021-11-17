@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Animation/PlayerAnimation.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://Sprites/Level/Water Drop.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/UI/HeartEmpty.png" type="Texture" id=6]
 [ext_resource path="res://Scenes/MobileControls.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Sprites/Level/BackgroundGround.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Level/BackgorundUnderground.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Level/BackgroundSky.png" type="Texture" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 30.0155 )
@@ -20,6 +23,153 @@ script = ExtResource( 2 )
 full_heart = ExtResource( 4 )
 empty_heart = ExtResource( 6 )
 jump_speed = 640.0
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.5, 0.5 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1040, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
+modulate = Color( 1, 1, 1, 0.733333 )
+margin_left = 1.0
+margin_top = -53.6342
+margin_right = 261.0
+margin_bottom = 92.3658
+rect_scale = Vector2( 4, 4 )
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( -1, 0 )
+motion_mirroring = Vector2( 1040, 0 )
+
+[node name="TextureRect2" type="TextureRect" parent="ParallaxBackground/ParallaxLayer2"]
+modulate = Color( 1, 1, 1, 0.733333 )
+margin_left = 1.0
+margin_top = 530.366
+margin_right = 261.0
+margin_bottom = 676.366
+rect_scale = Vector2( 4, 4 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="ParallaxBackground/ParallaxLayer2"]
+modulate = Color( 1, 1, 1, 0.733333 )
+margin_left = 1.0
+margin_top = 1114.37
+margin_right = 261.0
+margin_bottom = 1260.37
+rect_scale = Vector2( 4, 4 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect4" type="TextureRect" parent="ParallaxBackground/ParallaxLayer2"]
+modulate = Color( 1, 1, 1, 0.733333 )
+margin_left = 4.83162
+margin_top = 1698.37
+margin_right = 264.832
+margin_bottom = 1844.37
+rect_scale = Vector2( 4, 4 )
+texture = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.25, 0.25 )
+motion_mirroring = Vector2( 1040, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer3"]
+modulate = Color( 1, 1, 1, 0.733333 )
+margin_top = -583.998
+margin_right = 260.0
+margin_bottom = -437.998
+rect_scale = Vector2( 4, 4 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="ParallaxBackground/ParallaxLayer3"]
+modulate = Color( 1, 1, 1, 0.733333 )
+margin_top = -1168.0
+margin_right = 260.0
+margin_bottom = -1022.0
+rect_scale = Vector2( 4, 4 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="ParallaxBackground/ParallaxLayer3"]
+modulate = Color( 1, 1, 1, 0.733333 )
+margin_top = -1752.0
+margin_right = 260.0
+margin_bottom = -1606.0
+rect_scale = Vector2( 4, 4 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.5, 0.5 )
+motion_mirroring = Vector2( 1040, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer4"]
+modulate = Color( 1, 1, 1, 0.733333 )
+margin_left = -551.377
+margin_top = -670.899
+margin_right = -291.377
+margin_bottom = -524.899
+rect_scale = Vector2( 4, 4 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect4" type="TextureRect" parent="ParallaxBackground/ParallaxLayer4"]
+modulate = Color( 1, 1, 1, 0.733333 )
+margin_left = -39.3771
+margin_top = -374.899
+margin_right = 220.623
+margin_bottom = -228.899
+rect_scale = Vector2( 4, 4 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="ParallaxBackground/ParallaxLayer4"]
+modulate = Color( 1, 1, 1, 0.733333 )
+margin_left = -287.675
+margin_top = -1153.02
+margin_right = -27.675
+margin_bottom = -1007.02
+rect_scale = Vector2( 4, 4 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="ParallaxBackground/ParallaxLayer4"]
+modulate = Color( 1, 1, 1, 0.733333 )
+margin_left = -385.101
+margin_top = -1782.2
+margin_right = -125.101
+margin_bottom = -1636.2
+rect_scale = Vector2( 4, 4 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 4, 4 )
