@@ -7,6 +7,10 @@ func _ready():
 	find_node("FPSBox").pressed = Global.show_fps
 	
 	$VBoxContainer/HBoxContainer/VBoxContainer/PlayButton.grab_focus()
+	
+	if OS.has_feature("web"):
+		$VBoxContainer/HBoxContainer/VBoxContainer/QuitButton.visible = false
+		$VBoxContainer/HBoxContainer/VBoxContainer/Separator6.visible = false
 
 func _on_PlayButton_pressed():
 	SoundHandler.play_click()
