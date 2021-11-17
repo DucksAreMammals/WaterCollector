@@ -3,17 +3,18 @@ extends CanvasLayer
 var can_hide := false
 
 func _process(_delta):
-	if $LoseDialog.visible and Input.is_action_pressed("continue"):
+	if $LoseDialog.visible and Input.is_action_just_pressed("continue"):
 		_restart()
-	elif $WinDialog.visible and Input.is_action_pressed("continue"):
+	elif $WinDialog.visible and Input.is_action_just_pressed("continue"):
 		_next_level()
 
 func on_win():
+	can_hide = false
 	$WinDialog.popup_centered()
 	get_tree().paused = true
-
-
+	
 func on_loose():
+	can_hide = false
 	$LoseDialog.popup_centered()
 	get_tree().paused = true
 
@@ -47,16 +48,16 @@ func _on_LoseDialog_popup_hide():
 
 
 func _on_NextLevelButton_pressed():
-	$"/root/SoundHandler".play_click()
+	SoundHandler.play_click()
 	_next_level()
 
 func _on_RestartButton_pressed():
-	$"/root/SoundHandler".play_click()
+	SoundHandler.play_click()
 	_restart()
 
 
 func _on_MenuButton_pressed():
-	$"/root/SoundHandler".play_click()
+	SoundHandler.play_click()
 	can_hide = true
 	$WinDialog.hide()
 	$LoseDialog.hide()
