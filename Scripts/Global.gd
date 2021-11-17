@@ -20,7 +20,7 @@ var show_fps
 var good_ending = false
 
 func _ready():
-	if not OS.has_feature("web"):
+	if not OS.has_feature("web") and not OS.has_feature("mobile"):
 		OS.window_fullscreen = true
 	
 	load_from_file()
