@@ -2,11 +2,11 @@ extends CanvasLayer
 
 var can_hide := false
 
-func _process(_delta):
-	if $LoseDialog.visible and Input.is_action_just_pressed("continue"):
-		_restart()
-	elif $WinDialog.visible and Input.is_action_just_pressed("continue"):
-		_next_level()
+#func _process(_delta):
+#	if $LoseDialog.visible and Input.is_action_just_pressed("continue"):
+#		_restart()
+#	elif $WinDialog.visible and Input.is_action_just_pressed("continue"):
+#		_next_level()
 
 func on_win():
 	can_hide = false

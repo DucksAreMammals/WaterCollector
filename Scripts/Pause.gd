@@ -1,12 +1,15 @@
 extends CanvasLayer
 
 
-func _process(_delta):
-	if Input.is_action_just_pressed("continue"):
-		if $PopupDialog.visible:
-			_resume()
-		else:
-			_pause()
+func _ready():
+	$HBoxContainer/PauseButton.grab_focus()
+
+#func _process(_delta):
+#	if Input.is_action_just_pressed("continue"):
+#		if $PopupDialog.visible:
+#			_resume()
+#		else:
+#			_pause()
 
 func _resume():
 	$PopupDialog.visible = false
