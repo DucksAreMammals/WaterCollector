@@ -1,11 +1,10 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://Scenes/Level Objects/WaterFaucet.tscn" type="PackedScene" id=3]
 [ext_resource path="res://HurtTileset.tres" type="TileSet" id=4]
 [ext_resource path="res://Scripts/GameLogic.gd" type="Script" id=5]
-[ext_resource path="res://Scenes/Level Objects/NPC.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Level Objects/MovingPlatform.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Level Objects/Enemy.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/Level Objects/Drone.tscn" type="PackedScene" id=9]
@@ -132,10 +131,6 @@ position = Vector2( 1568, 480 )
 
 [node name="Enemy4" parent="Level/Enemies" instance=ExtResource( 8 )]
 position = Vector2( 3656, 480 )
-
-[node name="NPC" parent="Level" instance=ExtResource( 6 )]
-position = Vector2( 320, 480 )
-text = "The water switch is just over there!"
 
 [node name="MovingPlatform" parent="Level" instance=ExtResource( 7 )]
 position = Vector2( 2208, 584 )

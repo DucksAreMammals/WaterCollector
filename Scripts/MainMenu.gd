@@ -64,9 +64,12 @@ func _on_ClearProgressButton_pressed():
 	Global.level = 1
 	Global._original_level = 1
 	Global.water_count = 0
+	Global.has_won = false
 	Global.save_to_file()
 
 
 func _on_UnlockEverythingButton_pressed():
+	SoundHandler.play_click()
+	
 	Global.level = 9
 	Global.save_to_file()
