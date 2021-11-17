@@ -32,10 +32,10 @@ motion_mirroring = Vector2( 1040, 0 )
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
 modulate = Color( 1, 1, 1, 0.686275 )
-margin_left = 1.0
-margin_top = -53.6343
-margin_right = 261.0
-margin_bottom = 92.3657
+margin_left = 5.48987
+margin_top = -19.9605
+margin_right = 265.49
+margin_bottom = 126.04
 rect_scale = Vector2( 4, 4 )
 texture = ExtResource( 8 )
 __meta__ = {
@@ -48,10 +48,10 @@ motion_mirroring = Vector2( 1040, 0 )
 
 [node name="TextureRect2" type="TextureRect" parent="ParallaxBackground/ParallaxLayer2"]
 modulate = Color( 1, 1, 1, 0.686275 )
-margin_left = 1.0
-margin_top = 530.366
-margin_right = 261.0
-margin_bottom = 676.366
+margin_left = 5.48987
+margin_top = 564.04
+margin_right = 265.49
+margin_bottom = 710.04
 rect_scale = Vector2( 4, 4 )
 texture = ExtResource( 9 )
 __meta__ = {
@@ -60,10 +60,10 @@ __meta__ = {
 
 [node name="TextureRect3" type="TextureRect" parent="ParallaxBackground/ParallaxLayer2"]
 modulate = Color( 1, 1, 1, 0.686275 )
-margin_left = 1.0
-margin_top = 1114.37
-margin_right = 261.0
-margin_bottom = 1260.37
+margin_left = 5.48987
+margin_top = 1148.04
+margin_right = 265.49
+margin_bottom = 1294.04
 rect_scale = Vector2( 4, 4 )
 texture = ExtResource( 9 )
 __meta__ = {
@@ -72,10 +72,10 @@ __meta__ = {
 
 [node name="TextureRect4" type="TextureRect" parent="ParallaxBackground/ParallaxLayer2"]
 modulate = Color( 1, 1, 1, 0.686275 )
-margin_left = 4.8316
-margin_top = 1698.37
-margin_right = 264.832
-margin_bottom = 1844.37
+margin_left = 9.32147
+margin_top = 1732.04
+margin_right = 269.322
+margin_bottom = 1878.04
 rect_scale = Vector2( 4, 4 )
 texture = ExtResource( 9 )
 __meta__ = {

@@ -3,7 +3,8 @@ extends Node2D
 var materials = [
 	preload("res://Particles/Drop.tres"),
 	preload("res://Particles/WaterFaucet.tres"),
-	preload("res://Particles/Bullet.tres")
+	preload("res://Particles/Bullet.tres"),
+	preload("res://Particles/ButtonParticles.tres"),
 ]
 
 

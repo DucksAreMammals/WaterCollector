@@ -3,6 +3,8 @@ extends Node2D
 export var next_level := -1
 export var level_name := "1-1"
 
+func _ready():
+	Global.good_ending = false
 
 func _on_WaterFaucet_finish():
 	SoundHandler.play_win()

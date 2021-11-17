@@ -17,6 +17,7 @@ var music_level
 var sfx_level
 var show_fps
 
+var good_ending = false
 
 func _ready():
 	load_from_file()
