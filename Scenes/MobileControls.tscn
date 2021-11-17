@@ -8,10 +8,10 @@
 extents = Vector2( 18, 18 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 17, 17 )
+extents = Vector2( 17, 24 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 17, 17 )
+extents = Vector2( 24, 17 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 12, 18 )
@@ -19,7 +19,7 @@ extents = Vector2( 12, 18 )
 [node name="CanvasLayer" type="CanvasLayer"]
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="."]
-position = Vector2( 144, 448 )
+position = Vector2( 176, 448 )
 scale = Vector2( 4, 4 )
 normal = ExtResource( 1 )
 shape = SubResource( 1 )
@@ -38,7 +38,7 @@ action = "left"
 visibility_mode = 1
 
 [node name="TouchScreenButton5" type="TouchScreenButton" parent="."]
-position = Vector2( 672, 448 )
+position = Vector2( 736, 400 )
 scale = Vector2( 4, 4 )
 normal = ExtResource( 2 )
 shape = SubResource( 2 )
@@ -47,7 +47,7 @@ action = "shoot"
 visibility_mode = 1
 
 [node name="TouchScreenButton6" type="TouchScreenButton" parent="."]
-position = Vector2( 784, 448 )
+position = Vector2( 848, 464 )
 scale = Vector2( 4, 4 )
 normal = ExtResource( 3 )
 shape = SubResource( 2 )
@@ -56,7 +56,7 @@ action = "run"
 visibility_mode = 1
 
 [node name="TouchScreenButton3" type="TouchScreenButton" parent="."]
-position = Vector2( 896, 512 )
+position = Vector2( 848, 400 )
 rotation = -1.5708
 scale = Vector2( 4, 4 )
 normal = ExtResource( 1 )
@@ -66,7 +66,7 @@ action = "jump"
 visibility_mode = 1
 
 [node name="TouchScreenButton4" type="TouchScreenButton" parent="."]
-position = Vector2( 160, 336 )
+position = Vector2( 176, 336 )
 rotation = 1.5708
 scale = Vector2( 4, 4 )
 normal = ExtResource( 1 )
