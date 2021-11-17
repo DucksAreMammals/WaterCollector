@@ -105,6 +105,10 @@ shape = SubResource( 1 )
 position = Vector2( 1840, -304 )
 shape = SubResource( 1 )
 
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Level/Enemies/EnemyBoxes"]
+position = Vector2( 2904, -312 )
+shape = SubResource( 1 )
+
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Level/Enemies/EnemyBoxes"]
 position = Vector2( 2832, -624 )
 shape = SubResource( 1 )
