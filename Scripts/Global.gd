@@ -7,6 +7,7 @@ extends Node
 # Music Level
 # SFX Level
 # Show FPS
+# Has won
 var save_file = "user://save.save"
 
 var _original_level
@@ -16,6 +17,7 @@ var water_count
 var music_level
 var sfx_level
 var show_fps
+var has_won
 
 var good_ending = false
 
@@ -51,6 +53,9 @@ func save_to_file():
 	if show_fps == null:
 		show_fps = false
 	
+	if has_won == null:
+		has_won = false
+	
 	if level > _original_level:
 		file.store_var(level)
 		_original_level = level
@@ -61,6 +66,7 @@ func save_to_file():
 	file.store_var(music_level)
 	file.store_var(sfx_level)
 	file.store_var(show_fps)
+	file.store_var(has_won)
 	file.close()
 
 
@@ -75,6 +81,7 @@ func load_from_file():
 		music_level = file.get_var()
 		sfx_level = file.get_var()
 		show_fps = file.get_var()
+		has_won = file.get_var()
 		file.close()
 	else:
 		save_to_file()

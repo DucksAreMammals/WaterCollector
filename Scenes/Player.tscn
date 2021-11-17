@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Animation/PlayerAnimation.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://Scripts/Player.gd" type="Script" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Sprites/Level/BackgroundGround.png" type="Texture" id=8]
 [ext_resource path="res://Sprites/Level/BackgorundUnderground.png" type="Texture" id=9]
 [ext_resource path="res://Sprites/Level/BackgroundSky.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Entities/Crown.png" type="Texture" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 30.0155 )
@@ -248,3 +249,8 @@ __meta__ = {
 }
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 7 )]
+
+[node name="Crown" type="Sprite" parent="."]
+position = Vector2( -1.83162, -39.3929 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 11 )

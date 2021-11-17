@@ -70,6 +70,8 @@ func _ready():
 
 	water_count = Global.water_count
 	_update_water_count()
+	
+	$Crown.visible = Global.has_won
 
 
 func _process(_delta: float) -> void:
