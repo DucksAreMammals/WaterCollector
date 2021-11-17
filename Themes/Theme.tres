@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=13 format=2]
+[gd_resource type="Theme" load_steps=14 format=2]
 
 [ext_resource path="res://Fonts/PixelOperator.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Sprites/UI/Slider.png" type="Texture" id=2]
@@ -26,13 +26,17 @@ bg_color = Color( 0.286275, 0.266667, 0.227451, 1 )
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.14902, 0.137255, 0.113725, 1 )
 
-[sub_resource type="StyleBoxEmpty" id=7]
-content_margin_left = 4.0
-content_margin_right = 4.0
-content_margin_top = 4.0
-content_margin_bottom = 4.0
+[sub_resource type="StyleBoxFlat" id=9]
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
 
 [sub_resource type="StyleBoxLine" id=5]
+thickness = 10
+
+[sub_resource type="StyleBoxLine" id=10]
+color = Color( 0.6, 0.6, 0.6, 1 )
 thickness = 10
 
 [sub_resource type="StyleBoxFlat" id=6]
@@ -52,15 +56,35 @@ Button/styles/focus = SubResource( 8 )
 Button/styles/hover = SubResource( 2 )
 Button/styles/normal = SubResource( 3 )
 Button/styles/pressed = SubResource( 4 )
+CheckBox/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
+CheckBox/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+CheckBox/colors/font_color_focus = Color( 0.94, 0.94, 0.94, 1 )
+CheckBox/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
+CheckBox/colors/font_color_hover_pressed = Color( 1, 1, 1, 1 )
+CheckBox/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+CheckBox/constants/check_vadjust = 0
+CheckBox/constants/hseparation = 4
+CheckBox/fonts/font = null
 CheckBox/icons/checked = ExtResource( 3 )
+CheckBox/icons/checked_disabled = null
+CheckBox/icons/radio_checked = null
+CheckBox/icons/radio_checked_disabled = null
+CheckBox/icons/radio_unchecked = null
+CheckBox/icons/radio_unchecked_disabled = null
 CheckBox/icons/unchecked = ExtResource( 4 )
-CheckBox/styles/focus = SubResource( 7 )
+CheckBox/icons/unchecked_disabled = null
+CheckBox/styles/disabled = null
+CheckBox/styles/focus = SubResource( 9 )
+CheckBox/styles/hover = null
+CheckBox/styles/hover_pressed = null
+CheckBox/styles/normal = null
+CheckBox/styles/pressed = null
 HSlider/icons/grabber = ExtResource( 2 )
 HSlider/icons/grabber_disabled = ExtResource( 2 )
 HSlider/icons/grabber_highlight = ExtResource( 2 )
 HSlider/icons/tick = null
 HSlider/styles/grabber_area = SubResource( 5 )
-HSlider/styles/grabber_area_highlight = SubResource( 5 )
+HSlider/styles/grabber_area_highlight = SubResource( 10 )
 HSlider/styles/slider = SubResource( 5 )
 Label/colors/font_color = Color( 1, 1, 1, 1 )
 Label/colors/font_color_shadow = Color( 0, 0, 0, 1 )
