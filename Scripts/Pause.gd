@@ -9,7 +9,6 @@ func _process(_delta):
 			_pause()
 
 func _resume():
-
 	$PopupDialog.visible = false
 
 func _pause():
@@ -17,7 +16,7 @@ func _pause():
 	$PopupDialog.popup_centered()
 
 func _on_PauseButton_pressed():
-	$"/root/SoundHandler".play_click()
+	SoundHandler.play_click()
 	_pause()
 
 func _on_PopupDialog_popup_hide():
@@ -25,17 +24,17 @@ func _on_PopupDialog_popup_hide():
 
 
 func _on_MenuButton_pressed():
-	$"/root/SoundHandler".play_click()
+	SoundHandler.play_click()
 # warning-ignore:return_value_discarded
 	get_tree().change_scene("res://Scenes/MainMenu.tscn")
 
 
 func _on_ResumeButton_pressed():
-	$"/root/SoundHandler".play_click()
+	SoundHandler.play_click()
 	_resume()
 
 
 func _on_RestartButton_pressed():
-	$"/root/SoundHandler".play_click()
+	SoundHandler.play_click()
 # warning-ignore:return_value_discarded
 	get_tree().reload_current_scene()
