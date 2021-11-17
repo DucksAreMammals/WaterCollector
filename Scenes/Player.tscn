@@ -31,11 +31,11 @@ scroll_base_scale = Vector2( 0.5, 0.5 )
 motion_mirroring = Vector2( 1040, 0 )
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer"]
-modulate = Color( 1, 1, 1, 0.733333 )
+modulate = Color( 1, 1, 1, 0.686275 )
 margin_left = 1.0
-margin_top = -53.6342
+margin_top = -53.6343
 margin_right = 261.0
-margin_bottom = 92.3658
+margin_bottom = 92.3657
 rect_scale = Vector2( 4, 4 )
 texture = ExtResource( 8 )
 __meta__ = {
@@ -47,7 +47,7 @@ position = Vector2( -1, 0 )
 motion_mirroring = Vector2( 1040, 0 )
 
 [node name="TextureRect2" type="TextureRect" parent="ParallaxBackground/ParallaxLayer2"]
-modulate = Color( 1, 1, 1, 0.733333 )
+modulate = Color( 1, 1, 1, 0.686275 )
 margin_left = 1.0
 margin_top = 530.366
 margin_right = 261.0
@@ -59,7 +59,7 @@ __meta__ = {
 }
 
 [node name="TextureRect3" type="TextureRect" parent="ParallaxBackground/ParallaxLayer2"]
-modulate = Color( 1, 1, 1, 0.733333 )
+modulate = Color( 1, 1, 1, 0.686275 )
 margin_left = 1.0
 margin_top = 1114.37
 margin_right = 261.0
@@ -71,8 +71,8 @@ __meta__ = {
 }
 
 [node name="TextureRect4" type="TextureRect" parent="ParallaxBackground/ParallaxLayer2"]
-modulate = Color( 1, 1, 1, 0.733333 )
-margin_left = 4.83162
+modulate = Color( 1, 1, 1, 0.686275 )
+margin_left = 4.8316
 margin_top = 1698.37
 margin_right = 264.832
 margin_bottom = 1844.37
@@ -87,7 +87,7 @@ motion_scale = Vector2( 0.25, 0.25 )
 motion_mirroring = Vector2( 1040, 0 )
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer3"]
-modulate = Color( 1, 1, 1, 0.733333 )
+modulate = Color( 1, 1, 1, 0.686275 )
 margin_top = -583.998
 margin_right = 260.0
 margin_bottom = -437.998
@@ -98,7 +98,7 @@ __meta__ = {
 }
 
 [node name="TextureRect2" type="TextureRect" parent="ParallaxBackground/ParallaxLayer3"]
-modulate = Color( 1, 1, 1, 0.733333 )
+modulate = Color( 1, 1, 1, 0.686275 )
 margin_top = -1168.0
 margin_right = 260.0
 margin_bottom = -1022.0
@@ -109,7 +109,7 @@ __meta__ = {
 }
 
 [node name="TextureRect3" type="TextureRect" parent="ParallaxBackground/ParallaxLayer3"]
-modulate = Color( 1, 1, 1, 0.733333 )
+modulate = Color( 1, 1, 1, 0.686275 )
 margin_top = -1752.0
 margin_right = 260.0
 margin_bottom = -1606.0
@@ -124,7 +124,7 @@ motion_scale = Vector2( 0.5, 0.5 )
 motion_mirroring = Vector2( 1040, 0 )
 
 [node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer4"]
-modulate = Color( 1, 1, 1, 0.733333 )
+modulate = Color( 1, 1, 1, 0.686275 )
 margin_left = -551.377
 margin_top = -670.899
 margin_right = -291.377
@@ -136,7 +136,7 @@ __meta__ = {
 }
 
 [node name="TextureRect4" type="TextureRect" parent="ParallaxBackground/ParallaxLayer4"]
-modulate = Color( 1, 1, 1, 0.733333 )
+modulate = Color( 1, 1, 1, 0.686275 )
 margin_left = -39.3771
 margin_top = -374.899
 margin_right = 220.623
@@ -148,7 +148,7 @@ __meta__ = {
 }
 
 [node name="TextureRect2" type="TextureRect" parent="ParallaxBackground/ParallaxLayer4"]
-modulate = Color( 1, 1, 1, 0.733333 )
+modulate = Color( 1, 1, 1, 0.686275 )
 margin_left = -287.675
 margin_top = -1153.02
 margin_right = -27.675
@@ -160,7 +160,7 @@ __meta__ = {
 }
 
 [node name="TextureRect3" type="TextureRect" parent="ParallaxBackground/ParallaxLayer4"]
-modulate = Color( 1, 1, 1, 0.733333 )
+modulate = Color( 1, 1, 1, 0.686275 )
 margin_left = -385.101
 margin_top = -1782.2
 margin_right = -125.101
