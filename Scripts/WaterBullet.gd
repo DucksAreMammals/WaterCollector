@@ -4,6 +4,9 @@ export var speed = 1000
 export var direction = 1
 
 
+func _ready():
+	$WaterBullet.flip_h = direction < 0
+
 func _physics_process(delta):
 	position.x += delta * speed * direction
 
