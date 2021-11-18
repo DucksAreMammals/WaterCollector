@@ -4,6 +4,18 @@ This is a simple platformer game that I made in godot.
 
 You are tasked with the important mission of going to the water reset button and resetting the water source.
 
+## Controls:
+
+This can be platyed on either a keyboard, controller, or touchscreen.
+
+Move: Arrow keys or dpad
+Jump: Up arrow key or A on XBox controller
+Sprint: X or X on XBox controller
+Shoot: C or any sholder button on XBox controller
+Select: Enter, Space, or Start on XBox controller
+
+Toggle Fullscreen: F
+
 ## Links:
 
 ### Music:
