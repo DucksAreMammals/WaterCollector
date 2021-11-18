@@ -23,7 +23,7 @@ Toggle Fullscreen: F
 Again, Once Again by fluffy (c) copyright 2016 Licensed under a Creative Commons Attribution (3.0) license.\
 [https://dig.ccmixter.org/files/fluffy/53739](https://dig.ccmixter.org/files/fluffy/53739)
 
-### Sounds are edited by me and used sounds from:
+### Sounds:
 
 [https://freesound.org/people/edhutschek/sounds/218195/](https://freesound.org/people/edhutschek/sounds/218195/)\
 [https://freesound.org/people/Atrius1/sounds/470164/](https://freesound.org/people/Atrius1/sounds/470164/)\
