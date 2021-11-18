@@ -10,7 +10,7 @@ Play store link (May not be up yet): [https://play.google.com/store/apps/details
 
 ## Controls:
 
-This can be platyed on either a keyboard, controller, or touchscreen.
+This can be played on either a keyboard, controller, or touchscreen.
 
 Move: Arrow keys or dpad\
 Jump: Up arrow key or A on XBox controller\
