@@ -1,10 +1,14 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene format=2]
 
-[ext_resource path="res://Particles/WaterFaucet.tres" type="Material" id=1]
-
-[node name="Particles2D" type="Particles2D"]
+[node name="Particles2D" type="CPUParticles2D"]
 position = Vector2( -10, 2 )
 z_index = -5
 amount = 16
 preprocess = 2.0
-process_material = ExtResource( 1 )
+direction = Vector2( 0, 1 )
+spread = 90.0
+initial_velocity = 2.0
+scale_amount = 4.0
+color = Color( 0.117647, 0.345098, 0.701961, 1 )
+hue_variation = 0.04
+hue_variation_random = 1.0
