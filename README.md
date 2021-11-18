@@ -4,6 +4,10 @@ This is a simple platformer game that I made in godot.
 
 You are tasked with the important mission of going to the water reset button and resetting the water source.
 
+Itch page: [https://ducksaremammals.itch.io/watercollector](https://ducksaremammals.itch.io/watercollector)
+
+Play store link (May not be up yet): [https://play.google.com/store/apps/details?id=com.DucksAreMammals.watercollector](https://play.google.com/store/apps/details?id=com.DucksAreMammals.watercollector)
+
 ## Controls:
 
 This can be platyed on either a keyboard, controller, or touchscreen.
