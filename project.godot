@@ -10,9 +10,13 @@ config_version=4
 
 [application]
 
-config/name="HydroHomie Adventure"
+config/name="Water Collector"
+config/description="Collect water!"
 run/main_scene="res://Scenes/MainMenu.tscn"
 boot_splash/image="res://Splash.png"
+boot_splash/bg_color=Color( 0.12549, 0.145098, 0.192157, 1 )
+config/icon="res://Icon512.png"
+config/windows_native_icon="res://icon.ico"
 
 [autoload]
 

@@ -38,7 +38,7 @@ __meta__ = {
 margin_right = 1040.0
 margin_bottom = 56.0
 custom_colors/font_color = Color( 0, 0.109804, 1, 1 )
-text = "Hydrohomie Adventure"
+text = "Water Collector"
 align = 1
 
 [node name="Separator" type="Control" parent="VBoxContainer"]
