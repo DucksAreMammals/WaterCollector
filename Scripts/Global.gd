@@ -65,6 +65,7 @@ func save_to_file():
 	file.store_var(sfx_level)
 	file.store_var(show_fps)
 	file.store_var(has_won)
+	
 	file.close()
 
 	SoundHandler.update_volume()
