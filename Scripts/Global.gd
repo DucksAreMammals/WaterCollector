@@ -32,8 +32,6 @@ func _process(_delta):
 		OS.window_fullscreen = !OS.window_fullscreen
 
 func save_to_file():
-	SoundHandler.update_volume()
-
 	var file = File.new()
 	file.open(save_file, File.WRITE)
 	
@@ -69,6 +67,7 @@ func save_to_file():
 	file.store_var(has_won)
 	file.close()
 
+	SoundHandler.update_volume()
 
 func load_from_file():
 	var file = File.new()
