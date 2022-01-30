@@ -2,7 +2,6 @@
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/DucksAreMammals/WaterCollector?style=flat)
 ![GitHub repo size](https://img.shields.io/github/repo-size/DucksAreMammals/WaterCollector?style=flat)
-![Lines of code](https://img.shields.io/tokei/lines/github/DucksAreMammals/WaterCollector?style=flat)
 
 This is a simple platformer game that I made in godot.
 
